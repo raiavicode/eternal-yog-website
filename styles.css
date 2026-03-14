@@ -1,0 +1,89 @@
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f9f9f9;
+text-align:center;
+}
+
+.hero{
+background:#f3efe7;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.cta{
+display:inline-block;
+margin-top:20px;
+background:#2f855a;
+color:white;
+padding:14px 24px;
+text-decoration:none;
+border-radius:6px;
+font-size:16px;
+}
+
+section{
+padding:40px 20px;
+}
+
+ul{
+list-style:none;
+padding:0;
+}
+
+ul li{
+padding:6px;
+font-size:18px;
+}
+
+.card{
+border:1px solid #eee;
+background:white;
+margin:10px auto;
+padding:20px;
+max-width:300px;
+border-radius:8px;
+}
+
+form input,
+form select{
+display:block;
+margin:10px auto;
+padding:10px;
+width:250px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+button{
+padding:12px 20px;
+background:#2f855a;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.whatsapp-btn{
+display:inline-block;
+background:#25D366;
+padding:14px 20px;
+color:white;
+text-decoration:none;
+border-radius:6px;
+margin-top:20px;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+background:#eee;
+}
