@@ -1,23 +1,33 @@
 [
 {
 "title": "Stress Relief",
-"description": "Yoga helps calm the mind and reduce stress.",
-"details": "Regular yoga practice lowers cortisol levels and improves mental well-being. Breath control and mindful movements promote deep relaxation.",
+"description": "Calm your mind and release daily stress.",
+"details": "Yoga activates the body's relaxation response by slowing the breath and calming the nervous system. Studies show regular practice can lower cortisol, the body's main stress hormone, helping you feel more relaxed, balanced, and emotionally resilient throughout the day.",
 "link": "https://youtube.com"
 },
 {
-"title": "Improve Flexibility",
-"description": "Yoga improves mobility and posture.",
-"details": "Through regular stretching and balance poses, muscles become more flexible and joints gain better range of motion."
+"title": "Improved Flexibility",
+"description": "Move more freely and reduce stiffness.",
+"details": "Yoga gently stretches and lengthens muscles while increasing the range of motion in joints. Over time, regular practice can reduce muscle tightness, improve posture, and make everyday movements easier and more comfortable."
 },
 {
-"title": "Weight Balance",
-"description": "Yoga supports healthy metabolism.",
-"details": "Dynamic flows improve calorie burn and support metabolic balance."
+"title": "Strength & Muscle Tone",
+"description": "Build strength using your own body weight.",
+"details": "Many yoga poses engage multiple muscle groups at once, strengthening the core, legs, arms, and back. Consistent practice improves stability and muscle tone while supporting better overall body control and endurance."
 },
 {
-"title": "Mental Clarity",
-"description": "Breathing techniques improve focus.",
-"details": "Meditation and pranayama practices improve attention span and emotional balance."
+"title": "Mental Clarity & Focus",
+"description": "Sharpen concentration and calm the mind.",
+"details": "Breathing exercises, meditation, and mindful movement help quiet mental distractions and improve attention. Research shows mindfulness practices like yoga can enhance cognitive function and support emotional balance."
+},
+{
+"title": "Better Balance & Body Awareness",
+"description": "Improve stability, posture, and coordination.",
+"details": "Balancing poses train stabilizing muscles and improve body awareness. This helps strengthen joints, enhance posture, and reduce the risk of everyday injuries by improving coordination and control."
+},
+{
+"title": "Better Sleep Quality",
+"description": "Relax your body for deeper, restorative sleep.",
+"details": "Gentle yoga and breathing techniques help calm the nervous system before bedtime. Studies suggest regular yoga practice can improve sleep quality, helping people fall asleep faster and wake up feeling more refreshed."
 }
 ]
