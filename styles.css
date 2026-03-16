@@ -50,6 +50,7 @@ font-weight:500;
 .hero{
 height:90vh;
 background:url("https://images.unsplash.com/photo-1506126613408-eca07ce68773") center/cover no-repeat;
+/*background:url("assets/images/hero.jpg") --For when to replace with actual images */
 display:flex;
 align-items:center;
 justify-content:center;
