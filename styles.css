@@ -193,3 +193,16 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 }
 }
+
+/* Section fade animation */
+
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
+}
