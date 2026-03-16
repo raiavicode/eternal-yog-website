@@ -1,4 +1,7 @@
 /* ===== Base Styles ===== */
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
@@ -107,6 +110,13 @@ background:white;
 padding:30px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.classcard:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
 }
 
 /* ===== Instructor Image ===== */
