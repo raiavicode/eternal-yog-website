@@ -1,89 +1,99 @@
 body{
-font-family: Arial, sans-serif;
+font-family: 'Helvetica', sans-serif;
 margin:0;
-background:#f9f9f9;
-text-align:center;
+background:#faf8f5;
+color:#333;
+line-height:1.6;
 }
 
 .hero{
-background:#f3efe7;
-padding:80px 20px;
+background-image:url("https://images.unsplash.com/photo-1518611012118-f0c5c4b71b89");
+background-size:cover;
+background-position:center;
+padding:160px 20px;
+color:white;
+text-align:center;
+}
+
+.overlay{
+background:rgba(0,0,0,0.55);
+padding:50px;
+max-width:800px;
+margin:auto;
+border-radius:10px;
 }
 
 .hero h1{
-font-size:36px;
+font-size:48px;
 margin-bottom:10px;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
 }
 
 .cta{
 display:inline-block;
-margin-top:20px;
-background:#2f855a;
+margin-top:25px;
+background:#c8a97e;
 color:white;
-padding:14px 24px;
+padding:14px 30px;
 text-decoration:none;
-border-radius:6px;
-font-size:16px;
+border-radius:40px;
+font-size:18px;
 }
 
 section{
-padding:40px 20px;
+padding:70px 20px;
+max-width:1000px;
+margin:auto;
+text-align:center;
 }
 
 ul{
 list-style:none;
 padding:0;
-}
-
-ul li{
-padding:6px;
 font-size:18px;
 }
 
 .card{
-border:1px solid #eee;
 background:white;
-margin:10px auto;
-padding:20px;
-max-width:300px;
-border-radius:8px;
+margin:15px auto;
+padding:25px;
+max-width:350px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
-form input,
-form select{
-display:block;
-margin:10px auto;
-padding:10px;
-width:250px;
-border:1px solid #ccc;
-border-radius:4px;
+.card h3{
+margin-bottom:5px;
 }
 
-button{
-padding:12px 20px;
-background:#2f855a;
-color:white;
-border:none;
-border-radius:6px;
-cursor:pointer;
+img{
+max-width:100%;
 }
 
-.whatsapp-btn{
-display:inline-block;
-background:#25D366;
-padding:14px 20px;
-color:white;
-text-decoration:none;
-border-radius:6px;
+.testimonial{
+font-style:italic;
+font-size:18px;
 margin-top:20px;
 }
 
 footer{
-margin-top:40px;
-padding:20px;
-background:#eee;
+background:#f0ece6;
+padding:30px;
+margin-top:60px;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:16px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
