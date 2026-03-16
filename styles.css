@@ -1,99 +1,113 @@
 body{
-font-family: 'Helvetica', sans-serif;
 margin:0;
-background:#faf8f5;
+font-family:Helvetica,Arial;
+background:#faf7f2;
 color:#333;
-line-height:1.6;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:white;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.navlinks a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
 }
 
 .hero{
-background-image:url("https://images.unsplash.com/photo-1518611012118-f0c5c4b71b89");
+height:90vh;
+background-image:url("https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539");
 background-size:cover;
 background-position:center;
-padding:160px 20px;
-color:white;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+color:white;
 }
 
-.overlay{
-background:rgba(0,0,0,0.55);
-padding:50px;
-max-width:800px;
-margin:auto;
+.hero-content{
+background:rgba(0,0,0,0.5);
+padding:40px;
 border-radius:10px;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:20px;
 }
 
 .cta{
 display:inline-block;
-margin-top:25px;
+margin-top:20px;
+padding:14px 30px;
 background:#c8a97e;
 color:white;
-padding:14px 30px;
 text-decoration:none;
 border-radius:40px;
-font-size:18px;
 }
 
 section{
-padding:70px 20px;
+padding:80px 20px;
+text-align:center;
 max-width:1000px;
 margin:auto;
-text-align:center;
 }
 
-ul{
-list-style:none;
-padding:0;
-font-size:18px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:40px;
 }
 
 .card{
 background:white;
-margin:15px auto;
-padding:25px;
-max-width:350px;
+padding:30px;
 border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-.card h3{
-margin-bottom:5px;
+.classcard{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-img{
-max-width:100%;
+.instructor{
+width:260px;
+border-radius:12px;
+margin:20px 0;
 }
 
 .testimonial{
-font-style:italic;
-font-size:18px;
-margin-top:20px;
+background:#f0ece6;
+}
+
+.cta-section{
+background:#efe7dc;
 }
 
 footer{
-background:#f0ece6;
 padding:30px;
-margin-top:60px;
+background:#f0ece6;
 }
 
 .whatsapp-float{
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:20px;
+right:20px;
 background:#25D366;
 color:white;
 padding:16px 20px;
 border-radius:50px;
 text-decoration:none;
-font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
 }
