@@ -25,6 +25,41 @@ margin:auto;
 text-align:center;
 }
 
+/* Benefits popup */
+
+.benefit-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+pointer-events:none;
+transition:opacity .3s ease;
+z-index:200;
+}
+
+.benefit-modal.show{
+opacity:1;
+pointer-events:auto;
+}
+
+.benefit-modal-box{
+background:white;
+padding:40px;
+max-width:500px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 10px 40px rgba(0,0,0,0.2);
+}
+
+.benefit-modal-box h2{
+margin-bottom:10px;
+}
 /* ===== Navbar ===== */
 
 .navbar{
