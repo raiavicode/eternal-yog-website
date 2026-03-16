@@ -1,0 +1,21 @@
+[
+{
+"name": "Power Yoga",
+"level": "Intermediate",
+"duration": "60 min",
+"description": "Strength building dynamic yoga flow",
+"video": "https://youtube.com/watch?v=dQw4w9WgXcQ"
+},
+{
+"name": "Morning Yoga",
+"level": "Beginner",
+"duration": "45 min",
+"description": "Gentle yoga session for flexibility"
+},
+{
+"name": "Meditation",
+"level": "All Levels",
+"duration": "30 min",
+"description": "Guided meditation for relaxation"
+}
+]
