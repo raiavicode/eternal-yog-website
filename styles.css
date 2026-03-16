@@ -154,6 +154,7 @@ transition:transform .35s ease;
 box-shadow:0 -4px 15px rgba(0,0,0,0.15);
 }
 
+.card:hover .card-info,
 .classcard:hover .card-info{
 transform:translateY(0);
 }
