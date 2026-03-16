@@ -1,19 +1,23 @@
 [
 {
 "title": "Stress Relief",
-"description": "Yoga helps calm the mind and reduce daily stress.",
+"description": "Yoga helps calm the mind and reduce stress.",
+"details": "Regular yoga practice lowers cortisol levels and improves mental well-being. Breath control and mindful movements promote deep relaxation.",
 "link": "https://youtube.com"
 },
 {
 "title": "Improve Flexibility",
-"description": "Regular practice improves body mobility and flexibility."
+"description": "Yoga improves mobility and posture.",
+"details": "Through regular stretching and balance poses, muscles become more flexible and joints gain better range of motion."
 },
 {
 "title": "Weight Balance",
-"description": "Yoga helps maintain healthy body weight and metabolism."
+"description": "Yoga supports healthy metabolism.",
+"details": "Dynamic flows improve calorie burn and support metabolic balance."
 },
 {
 "title": "Mental Clarity",
-"description": "Breathing techniques improve focus and mental calm."
+"description": "Breathing techniques improve focus.",
+"details": "Meditation and pranayama practices improve attention span and emotional balance."
 }
 ]
