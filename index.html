@@ -45,7 +45,7 @@ Enroll For Classes
 </header>
 
 
-<section class="benefits">
+<section class="benefits fade-in">
 
 <h2>Why Practice Yoga</h2>
 
@@ -72,7 +72,7 @@ Mental Clarity
 </section>
 
 
-<section id="about">
+<section id="about" class="fade-in">
 
 <h2>Meet Your Instructor</h2>
 
@@ -90,7 +90,7 @@ Her classes combine traditional yoga with modern wellness practices.
 </section>
 
 
-<section id="classes">
+<section id="classes" class="fade-in">
 
 <h2>Our Classes</h2>
 
@@ -125,7 +125,7 @@ Her classes combine traditional yoga with modern wellness practices.
 </section>
 
 
-<section class="testimonial">
+<section class="testimonial fade-in">
 
 <h2>Student Experience</h2>
 
@@ -137,7 +137,7 @@ Her classes combine traditional yoga with modern wellness practices.
 
 </section>
 
-<section>
+<section class="fade-in">
 
 <h2>Yoga Moments</h2>
 
@@ -155,7 +155,7 @@ Her classes combine traditional yoga with modern wellness practices.
 
 </section>
 
-<section id="register" class="cta-section">
+<section id="register" class="cta-section fade-in">
 
 <h2>Begin Your Yoga Journey Today</h2>
 
@@ -183,17 +183,20 @@ WhatsApp
 
 <script>
 
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
+const elements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
 if(entry.isIntersecting){
-entry.target.classList.add('visible');
+entry.target.classList.add('show');
 }
 });
+},{
+threshold:0.2
 });
 
-document.querySelectorAll('section').forEach(section=>{
-section.classList.add('fade-in');
-observer.observe(section);
+elements.forEach(el=>{
+observer.observe(el);
 });
 
 </script>
