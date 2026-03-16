@@ -1,8 +1,13 @@
 body{
 margin:0;
-font-family:Helvetica,Arial,sans-serif;
+font-family: 'Inter', sans-serif; /* Base font for clean modern readability */
 background:#faf7f2;
 color:#333;
+}
+
+/* Use Playfair Display for headings to give a premium yoga/wellness brand feel */
+h1,h2,h3{
+font-family:'Playfair Display',serif;
 }
 
 /* NAVBAR */
