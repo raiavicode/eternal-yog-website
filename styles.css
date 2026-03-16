@@ -198,11 +198,11 @@ grid-template-columns:1fr;
 
 .fade-in{
 opacity:0;
-transform:translateY(30px);
-transition:all 0.8s ease;
+transform:translateY(40px);
+transition:opacity 0.8s ease, transform 0.8s ease;
 }
 
-.fade-in.visible{
+.fade-in.show{
 opacity:1;
 transform:translateY(0);
 }
