@@ -268,12 +268,6 @@ justify-content:center;
 display:flex;
 align-items:center;
 justify-content:center;
-width:60px;
-height:60px;
-border-radius:50%;
-border:2px solid #333;
-color:#333;
-transition:all 0.3s ease;
 }
 
 /* Hover effect */
