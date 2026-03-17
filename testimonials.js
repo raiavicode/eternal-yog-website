@@ -11,7 +11,8 @@ slide.className = "carousel-slide";
 
 slide.innerHTML = `
 <p>"${t.text}"</p>
-<h4>- ${t.name}</h4>
+<h4>${t.name}</h4>
+<span class="since">${t.since}</span>
 `;
 
 track.appendChild(slide);
@@ -20,27 +21,49 @@ track.appendChild(slide);
 
 let index = 0;
 
-const slides = document.querySelectorAll(".carousel-slide");
+function getSlidesPerView(){
+if(window.innerWidth < 600) return 1;
+if(window.innerWidth < 900) return 2;
+return 3;
+}
 
-function showSlide(i){
-track.style.transform = `translateX(-${i * 100}%)`;
+function updateCarousel(){
+const slides = document.querySelectorAll(".carousel-slide");
+const perView = getSlidesPerView();
+const slideWidth = 100 / perView;
+
+slides.forEach(s => {
+s.style.minWidth = slideWidth + "%";
+});
+
+move();
+}
+
+function move(){
+const perView = getSlidesPerView();
+track.style.transform = `translateX(-${index * (100 / perView)}%)`;
 }
 
 document.querySelector(".next").onclick = () => {
-index = (index + 1) % slides.length;
-showSlide(index);
+const maxIndex = data.length - getSlidesPerView();
+index = index >= maxIndex ? 0 : index + 1;
+move();
 };
 
 document.querySelector(".prev").onclick = () => {
-index = (index - 1 + slides.length) % slides.length;
-showSlide(index);
+const maxIndex = data.length - getSlidesPerView();
+index = index <= 0 ? maxIndex : index - 1;
+move();
 };
 
-/* Auto slide */
+window.addEventListener("resize", updateCarousel);
 
 setInterval(() => {
-index = (index + 1) % slides.length;
-showSlide(index);
+const maxIndex = data.length - getSlidesPerView();
+index = index >= maxIndex ? 0 : index + 1;
+move();
 }, 4000);
+
+updateCarousel();
 
 });
