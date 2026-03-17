@@ -113,10 +113,22 @@ object-fit:cover;
 z-index:-1;
 }
 
+/*
 .hero-overlay{
 background:rgba(0,0,0,0.45);
 padding:60px;
 border-radius:12px;
+}
+*/
+/* HERO OVERLAY FIX */
+
+.hero-overlay{
+background:rgba(0,0,0,0.45);
+padding:50px 40px;
+border-radius:12px;
+max-width:600px;   /* key fix */
+width:90%;         /* responsive */
+margin:auto;
 }
 
 .hero-overlay h1{
@@ -126,6 +138,49 @@ margin-bottom:10px;
 
 .hero-overlay p{
 font-size:20px;
+}
+
+/* Tablet */
+
+@media(max-width:900px){
+
+.hero-overlay{
+max-width:500px;
+padding:40px 25px;
+}
+
+.hero-overlay h1{
+font-size:36px;
+}
+
+.hero-overlay p{
+font-size:18px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:500px){
+
+.hero-overlay{
+max-width:90%;
+padding:30px 20px;
+}
+
+.hero-overlay h1{
+font-size:28px;
+}
+
+.hero-overlay p{
+font-size:16px;
+}
+
+.cta{
+padding:12px 24px;
+font-size:14px;
+}
+
 }
 
 /* ===== Buttons ===== */
