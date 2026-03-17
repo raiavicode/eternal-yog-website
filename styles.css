@@ -1,5 +1,14 @@
 /* ===== Base ===== */
 
+/* ===== Color pallete ===== */
+:root{
+--buttercup:#f3d9a5;
+--ivory:#f7f3ec;
+--anar:#d96c5f;
+--rose:#e8a4a8;
+--nutmeg:#c4a484;
+}
+
 html{
 scroll-behavior:smooth;
 }
@@ -228,12 +237,58 @@ transition:transform .3s ease, box-shadow .3s ease;
 position:relative;
 overflow:hidden;
 cursor:pointer;
+color:#333;
+}
+
+/* Colored cards 
+
+.card,
+.classcard{
+color:#333;
+}*/
+
+/* Alternate background shades */
+
+.grid .card:nth-child(1),
+.grid .classcard:nth-child(1){
+background:var(--ivory);
+}
+
+.grid .card:nth-child(2),
+.grid .classcard:nth-child(2){
+background:var(--buttercup);
+}
+
+.grid .card:nth-child(3),
+.grid .classcard:nth-child(3){
+background:#f2e4d8; /* soft nutmeg tint */
+}
+
+.grid .card:nth-child(4),
+.grid .classcard:nth-child(4){
+background:#f8e1e3; /* soft rose plume */
+}
+
+.grid .card:nth-child(5),
+.grid .classcard:nth-child(5){
+background:#f4d2cc; /* soft anar tint */
 }
 
 .card:hover,
 .classcard:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 30px rgba(0,0,0,0.12);
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card h3,
+.classcard h3{
+margin-bottom:10px;
+}
+
+.card p,
+.classcard p{
+font-size:15px;
+line-height:1.5;
 }
 
 /* ===== Hover Panel ===== */
@@ -289,27 +344,38 @@ transition:transform 0.5s ease;
 }
 
 .carousel-slide{
+min-width:100%;
 padding:20px;
-box-sizing:border-box;
-text-align:center;
+display:flex;
+justify-content:center;
 }
+
+.carousel-slide > div{
+background:white;
+padding:30px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+max-width:500px;
+}
+
+/* Text */
 
 .carousel-slide p{
 font-style:italic;
-font-size:18px;
+font-size:17px;
+color:#555;
 }
 
 .carousel-slide h4{
-margin-top:10px;
+margin-top:15px;
+font-weight:600;
 }
 
 .since{
-display:block;
-font-size:14px;
-color:#777;
+font-size:13px;
+color:#888;
 margin-top:5px;
 }
-
 /* Buttons */
 
 .carousel-btn{
