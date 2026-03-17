@@ -96,11 +96,13 @@ font-weight:500;
 position:relative;
 height:90vh;
 overflow:hidden;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 text-align:center;
-color:white;
+padding:0 15px;   /* prevents edge sticking on mobile */
 }
 
 .hero-bg{
@@ -124,11 +126,14 @@ border-radius:12px;
 
 .hero-overlay{
 background:rgba(0,0,0,0.45);
-padding:50px 40px;
+padding:40px 25px;
 border-radius:12px;
-max-width:600px;   /* key fix */
-width:90%;         /* responsive */
-margin:auto;
+
+width:auto;              /* important */
+max-width:500px;         /* desktop cap */
+margin:0 auto;           /* center */
+
+display:inline-block;    /* prevents full width stretch */
 }
 
 .hero-overlay h1{
@@ -165,7 +170,8 @@ font-size:18px;
 
 .hero-overlay{
 max-width:90%;
-padding:30px 20px;
+padding:25px 18px;
+display:inline-block;  /* reinforce */
 }
 
 .hero-overlay h1{
