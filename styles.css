@@ -214,9 +214,12 @@ margin:20px 0;
 
 .carousel{
 position:relative;
-overflow:hidden;
-max-width:700px;
+max-width:900px;
 margin:40px auto;
+}
+
+.carousel-viewport{
+overflow:hidden;
 }
 
 .carousel-track{
@@ -225,7 +228,6 @@ transition:transform 0.5s ease;
 }
 
 .carousel-slide{
-min-width:100%;
 padding:20px;
 box-sizing:border-box;
 text-align:center;
@@ -238,6 +240,13 @@ font-size:18px;
 
 .carousel-slide h4{
 margin-top:10px;
+}
+
+.since{
+display:block;
+font-size:14px;
+color:#777;
+margin-top:5px;
 }
 
 /* Buttons */
@@ -254,14 +263,8 @@ cursor:pointer;
 border-radius:50%;
 }
 
-.prev{
-left:10px;
-}
-
-.next{
-right:10px;
-}
-
+.prev{ left:-10px; }
+.next{ right:-10px; }
 /* ===== Testimonial ===== */
 
 .testimonial{
