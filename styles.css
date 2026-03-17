@@ -210,6 +210,58 @@ border-radius:12px;
 margin:20px 0;
 }
 
+/* Carousel */
+
+.carousel{
+position:relative;
+overflow:hidden;
+max-width:700px;
+margin:40px auto;
+}
+
+.carousel-track{
+display:flex;
+transition:transform 0.5s ease;
+}
+
+.carousel-slide{
+min-width:100%;
+padding:20px;
+box-sizing:border-box;
+text-align:center;
+}
+
+.carousel-slide p{
+font-style:italic;
+font-size:18px;
+}
+
+.carousel-slide h4{
+margin-top:10px;
+}
+
+/* Buttons */
+
+.carousel-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#c8a97e;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+border-radius:50%;
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
+}
+
 /* ===== Testimonial ===== */
 
 .testimonial{
