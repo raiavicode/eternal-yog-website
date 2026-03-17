@@ -256,6 +256,34 @@ box-shadow:0 4px 12px rgba(0,0,0,0.2);
 z-index:999;
 }
 
+/* Instagram icon (centered below text) */
+
+.instagram-icon-wrapper{
+margin-top:20px;
+display:flex;
+justify-content:center;
+}
+
+.instagram-icon{
+display:flex;
+align-items:center;
+justify-content:center;
+width:60px;
+height:60px;
+border-radius:50%;
+border:2px solid #333;
+color:#333;
+transition:all 0.3s ease;
+}
+
+/* Hover effect */
+
+.instagram-icon:hover{
+background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+color:white;
+border:none;
+transform:scale(1.1);
+}
 /* ===== WhatsApp Button ===== */
 
 .whatsapp-float{
