@@ -10,9 +10,11 @@ const slide = document.createElement("div");
 slide.className = "carousel-slide";
 
 slide.innerHTML = `
+<div>
 <p>"${t.text}"</p>
 <h4>${t.name}</h4>
 <span class="since">${t.since}</span>
+</div>
 `;
 
 track.appendChild(slide);
