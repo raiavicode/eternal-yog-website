@@ -18,14 +18,28 @@ if(blogId){
 
 const blog = blogs.find(b => b.id == blogId);
 
-filter.style.display = "none";
+/* SEO */
+
+document.title = blog.seoTitle;
+
+const metaDesc = document.querySelector("meta[name='description']");
+if(metaDesc){
+metaDesc.setAttribute("content", blog.seoDescription);
+}
+
+/* Render blog */
 
 container.innerHTML = `
 <div class="blog-detail">
-<h2>${blog.title}</h2>
+
+<h1>${blog.title}</h1>
+
+<p class="blog-highlight">${blog.highlight}</p>
+
 <p>${blog.content}</p>
 
 <a href="blog.html" class="cta">← Back to Blogs</a>
+
 </div>
 `;
 
