@@ -70,6 +70,33 @@ box-shadow:0 10px 40px rgba(0,0,0,0.2);
 margin-bottom:10px;
 }
 
+/* Blog cards */
+
+.blog-card{
+cursor:pointer;
+transition:0.3s;
+}
+
+.blog-card:hover{
+transform:translateY(-6px);
+}
+
+/* Blog detail */
+
+.blog-detail{
+max-width:700px;
+margin:auto;
+text-align:left;
+}
+
+.blog-detail h2{
+margin-bottom:20px;
+}
+
+.blog-detail p{
+line-height:1.7;
+margin-bottom:20px;
+}
 /* Blog filter buttons */
 
 #category-filter{
