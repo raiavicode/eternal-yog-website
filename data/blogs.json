@@ -1,17 +1,23 @@
 [
 {
+"id": 1,
 "title": "5 Benefits of Daily Yoga",
 "category": "Beginner",
-"content": "Yoga improves flexibility, strength, and mental clarity..."
+"highlight": "Discover how just 20 minutes of yoga daily can transform your body and mind.",
+"content": "Yoga is more than just physical exercise. It combines breath control, movement, and mindfulness to improve overall well-being. Regular practice enhances flexibility, builds strength, reduces stress, and improves sleep quality. Even beginners can experience noticeable benefits within a few weeks of consistent practice."
 },
 {
+"id": 2,
 "title": "Best Morning Yoga Routine",
 "category": "Routine",
-"content": "Start your day with these simple yoga poses..."
+"highlight": "Start your day energized with this simple yoga flow.",
+"content": "A morning yoga routine helps awaken your body and mind. Begin with gentle stretches, move into sun salutations, and finish with breathing exercises. This routine boosts circulation, improves focus, and sets a positive tone for the rest of the day."
 },
 {
+"id": 3,
 "title": "Meditation for Stress Relief",
 "category": "Mindfulness",
-"content": "Breathing techniques and meditation help calm the mind..."
+"highlight": "Learn how breathing techniques can instantly calm your mind.",
+"content": "Meditation is a powerful tool for stress management. By focusing on your breath and staying present, you can reduce anxiety and improve emotional balance. Practicing even 10 minutes daily can significantly improve mental clarity and relaxation."
 }
 ]
