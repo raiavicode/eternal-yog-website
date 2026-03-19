@@ -69,6 +69,29 @@ box-shadow:0 10px 40px rgba(0,0,0,0.2);
 .benefit-modal-box h2{
 margin-bottom:10px;
 }
+
+/* Blog filter buttons */
+
+#category-filter{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
+margin-top:20px;
+}
+
+#category-filter button{
+padding:10px 16px;
+border:none;
+background:#c8a97e;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+#category-filter button:hover{
+background:#b8966b;
+}
 /* ===== Navbar ===== */
 
 .navbar{
