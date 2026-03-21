@@ -2,8 +2,8 @@
 <html>
 <head>
 <title>Join Classes | Eternal Yog</title>
-<link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -12,46 +12,21 @@
 
 <div class="checkout-card">
 
-<h2>Complete Your Enrollment</h2>
-<p>Begin your journey with Eternal Yog</p>
+<h2>Choose Your Plan</h2>
 
-<form id="joinForm">
+<div id="plans-container" class="plans"></div>
 
-<input type="text" id="name" placeholder="Full Name" required>
+<!-- PLAN DETAILS -->
 
-<input type="tel" id="phone" placeholder="Phone Number" required>
+<div id="plan-details" class="plan-details hidden"></div>
 
-<select id="plan">
-<option>Choose Plan</option>
-<option>Free Trial</option>
-<option>Monthly Plan</option>
-<option>Advanced Yoga</option>
-</select>
-
-<button type="submit" class="cta">Continue</button>
-
-</form>
+<button id="payBtn" class="cta hidden">Proceed to Pay</button>
 
 </div>
 
 </section>
 
-<script>
-
-document.getElementById("joinForm").addEventListener("submit", function(e){
-e.preventDefault();
-
-const name = document.getElementById("name").value;
-const phone = document.getElementById("phone").value;
-const plan = document.getElementById("plan").value;
-
-const message = `Hi, I want to join Eternal Yog.%0AName: ${name}%0APhone: ${phone}%0APlan: ${plan}`;
-
-window.open(`https://wa.me/919220605069?text=${message}`, "_blank");
-
-});
-
-</script>
+<script src="plans.js"></script>
 
 </body>
 </html>
