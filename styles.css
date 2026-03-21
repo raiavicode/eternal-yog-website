@@ -25,6 +25,28 @@ color:var(--text-dark);
 h1,h2,h3{
 font-family:'Playfair Display',serif;
 }
+/* ===== FORM ===== */
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:20px;
+}
+
+form input,
+form select{
+padding:14px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:14px;
+}
+
+form input:focus,
+form select:focus{
+outline:none;
+border-color:#c4a484;
+}
 
 section{
 padding:80px 20px;
