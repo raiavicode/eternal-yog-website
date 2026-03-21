@@ -1,0 +1,26 @@
+[
+{
+"id": "trial",
+"name": "Free Trial",
+"price": "₹0",
+"duration": "1 Session",
+"frequency": "One-time",
+"description": "Try a single session before enrolling"
+},
+{
+"id": "monthly",
+"name": "Monthly Plan",
+"price": "₹999",
+"duration": "1 Month",
+"frequency": "Daily Classes",
+"description": "Unlimited access to all classes"
+},
+{
+"id": "advanced",
+"name": "Advanced Yoga",
+"price": "₹1999",
+"duration": "1 Month",
+"frequency": "Personal Coaching",
+"description": "Personalized sessions with guidance"
+}
+]
