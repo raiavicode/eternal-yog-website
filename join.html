@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Join Classes | Eternal Yog</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<section class="checkout">
+
+<div class="checkout-card">
+
+<h2>Complete Your Enrollment</h2>
+<p>Begin your journey with Eternal Yog</p>
+
+<form id="joinForm">
+
+<input type="text" id="name" placeholder="Full Name" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<select id="plan">
+<option>Choose Plan</option>
+<option>Free Trial</option>
+<option>Monthly Plan</option>
+<option>Advanced Yoga</option>
+</select>
+
+<button type="submit" class="cta">Continue</button>
+
+</form>
+
+</div>
+
+</section>
+
+<script>
+
+document.getElementById("joinForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+const plan = document.getElementById("plan").value;
+
+const message = `Hi, I want to join Eternal Yog.%0AName: ${name}%0APhone: ${phone}%0APlan: ${plan}`;
+
+window.open(`https://wa.me/919220605069?text=${message}`, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
