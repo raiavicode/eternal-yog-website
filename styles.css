@@ -553,6 +553,29 @@ transform:scale(1.08);
 box-shadow:0 12px 30px rgba(0,0,0,0.2);
 }
 
+/* PLAN DETAILS */
+
+.plan-details{
+margin-top:20px;
+}
+
+.plan-details table{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+
+.plan-details td{
+padding:10px;
+border-bottom:1px solid #eee;
+text-align:left;
+}
+
+/* Hide */
+
+.hidden{
+display:none;
+}
 /* ===== Instagram ===== */
 
 .instagram-grid{
