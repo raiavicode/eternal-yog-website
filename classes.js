@@ -1,32 +1,33 @@
+document.addEventListener("DOMContentLoaded", function(){
+
 fetch("data/classes.json")
 .then(res => res.json())
-.then(classes => {
+.then(data => {
 
-const container = document.getElementById("classes-grid");
+const container = document.getElementById("classes-container");
 
-classes.forEach(c => {
+if(!container){
+console.error("Classes container not found");
+return;
+}
+
+data.forEach(item => {
 
 const card = document.createElement("div");
 card.className = "classcard";
 
 card.innerHTML = `
-<h3>${c.name}</h3>
-<p class="level">${c.level}</p>
-<p class="duration">${c.duration}</p>
-
-<div class="card-info">
-
-<p>${c.description || ""}</p>
-
-${c.video ? `<a class="card-link" href="${c.video}" target="_blank">Watch Example</a>` : ""}
-
-<a class="cta small" href="https://forms.gle/Ho6Sdi6eCTBkC4Gi7">Enroll</a>
-
-</div>
+<h3>${item.name}</h3>
+<p><strong>Level:</strong> ${item.level}</p>
+<p><strong>Duration:</strong> ${item.duration}</p>
+<p>${item.description}</p>
 `;
 
 container.appendChild(card);
 
 });
+
+})
+.catch(err => console.error("Classes load error:", err));
 
 });
