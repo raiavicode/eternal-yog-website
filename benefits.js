@@ -4,10 +4,10 @@ fetch("data/benefits.json")
 .then(res => res.json())
 .then(data => {
 
-const container = document.getElementById("benefits-grid");
+const container = document.getElementById("benefits-container");
 
 if(!container){
-console.error("Benefits container missing");
+console.error("Benefits container not found");
 return;
 }
 
@@ -26,6 +26,6 @@ container.appendChild(card);
 });
 
 })
-.catch(err => console.error("Error loading benefits:", err));
+.catch(err => console.error("Benefits load error:", err));
 
 });
