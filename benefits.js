@@ -1,17 +1,15 @@
+document.addEventListener("DOMContentLoaded", function(){
+
 fetch("data/benefits.json")
 .then(res => res.json())
 .then(data => {
 
-const container = document.getElementById("benefits-container");
-
-/* SAFETY CHECK */
+const container = document.getElementById("benefits-grid");
 
 if(!container){
-console.error("Benefits container not found");
+console.error("Benefits container missing");
 return;
 }
-
-/* RENDER CARDS */
 
 data.forEach(item => {
 
@@ -25,34 +23,9 @@ card.innerHTML = `
 
 container.appendChild(card);
 
-/* ADD CLICK EVENT SAFELY */
-
-card.addEventListener("click", () => {
-
-const modal = document.getElementById("benefit-modal");
-const content = document.getElementById("benefit-modal-content");
-
-if(!modal || !content) return;
-
-content.innerHTML = `
-<h2>${item.title}</h2>
-<p>${item.details}</p>
-`;
-
-modal.classList.add("show");
-
 });
 
-});
-
-/* CLOSE MODAL */
-
-document.addEventListener("click", (e) => {
-const modal = document.getElementById("benefit-modal");
-
-if(e.target.id === "benefit-modal"){
-modal.classList.remove("show");
-}
-});
+})
+.catch(err => console.error("Error loading benefits:", err));
 
 });
