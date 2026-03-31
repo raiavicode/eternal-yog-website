@@ -1,49 +1,58 @@
 fetch("data/benefits.json")
 .then(res => res.json())
-.then(benefits => {
+.then(data => {
 
-const container = document.getElementById("benefits-grid");
-const modal = document.getElementById("benefit-modal");
-const modalContent = document.getElementById("benefit-modal-content");
+const container = document.getElementById("benefits-container");
 
-benefits.forEach(b => {
+/* SAFETY CHECK */
+
+if(!container){
+console.error("Benefits container not found");
+return;
+}
+
+/* RENDER CARDS */
+
+data.forEach(item => {
 
 const card = document.createElement("div");
 card.className = "card";
 
 card.innerHTML = `
-<h3>${b.title}</h3>
-<p>${b.description}</p>
+<h3>${item.title}</h3>
+<p>${item.description}</p>
 `;
+
+container.appendChild(card);
+
+/* ADD CLICK EVENT SAFELY */
 
 card.addEventListener("click", () => {
 
-modalContent.innerHTML = `
-<h2>${b.title}</h2>
-<p>${b.details}</p>
-${b.link ? `<a class="card-link" href="${b.link}" target="_blank">Learn More</a>` : ""}
+const modal = document.getElementById("benefit-modal");
+const content = document.getElementById("benefit-modal-content");
+
+if(!modal || !content) return;
+
+content.innerHTML = `
+<h2>${item.title}</h2>
+<p>${item.details}</p>
 `;
 
 modal.classList.add("show");
 
 });
 
-container.appendChild(card);
-
 });
 
-/* close when clicking outside */
+/* CLOSE MODAL */
 
-modal.addEventListener("click", e => {
-if(e.target === modal){
+document.addEventListener("click", (e) => {
+const modal = document.getElementById("benefit-modal");
+
+if(e.target.id === "benefit-modal"){
 modal.classList.remove("show");
 }
-});
-
-/* close when scrolling */
-
-window.addEventListener("scroll", () => {
-modal.classList.remove("show");
 });
 
 });
