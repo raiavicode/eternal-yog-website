@@ -1,0 +1,1084 @@
+/* ── VARIABLES ── */
+:root {
+  --sage:         #cbc3a8;   /* warm tan/beige — used for navbar bg */
+  --deep-green:   #4e5b2c;   /* dark olive green — headings, accents */
+  --warm-brown:   #b35a0c;   /* burnt orange — reserved for future accents */
+  --light-ivory:  #f6f3ec;   /* off-white — default section background */
+  /* Section 2 – tweak these two to adjust box backgrounds */
+  --badge-bg:     #dbe3e8;   /* About badge box background */
+  --about-box-bg: #f4dccb;   /* About Us dashed content box background */
+  /* Navbar height – update this if navbar padding/font ever changes */
+  --navbar-h:     72px;      /* used to size hero height via calc() */
+  /* Section 3 – Why Join Us (tweak any of these independently) */
+  --wj-bg:           #e8ede0;   /* Why Join Us section background */
+  --wj-badge-bg:     #c8d4bc;   /* Why Join Us badge box background */
+  --wj-grid-bg:      #c9dff0;   /* dashed image container background (light blue) */
+  --wj-grid-border:  #a09a88;   /* dashed image container border colour */
+  /* Section 6 – Gallery */
+  --gallery-bg:         #b08d75;   /* deep warm brown — section background     */
+  --gallery-badge-bg:   #65493c;   /* slightly lighter brown — badge bg        */
+  --gallery-text-light: #f0ead8;   /* warm ivory — text on dark backgrounds    */
+  /* Section 5 – Path of Practice */
+  --classes-bg:          #eddcbb;              /* section background             */
+  --classes-badge-bg:    #c8d4bc;              /* badge box background           */
+  --classes-hover-bg:    rgba(20, 15, 5, 0.78);/* hover overlay tint             */
+  /* Section 4 – Instructor */
+  --instructor-bg:           #f0ece3;   /* Instructor section background */
+  --instructor-badge-bg:     #dbe3e8;   /* Instructor badge box background */
+  --instructor-text-bg:      #f5c6a878;   /* Peach bio text column background */
+  --instructor-quote-border: #4e5b2c;   /* Quote overlay border and quote-mark colour */
+  /* Section 7 – Testimonials & Contact */
+  --testimonials-bg:          #b3a296;   /* solid dark brown — section background */
+  --testimonials-badge-bg:    #cea385;   /* deeper brown — badge background */
+  --testimonials-card-bg:     #f5ede0;   /* warm beige — testimonial card background */
+  --testimonials-card-border: #c49a6a;   /* warm tan — decorative card outline */
+  --contact-text-bg:          #4a3425;   /* slightly lighter brown — text info box */
+  --contact-wa-bg:            #7b9183;   /* WhatsApp green */
+  --contact-ig-bg:            #5a4752;   /* Instagram gradient accent pink */
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;   /* padding/border included in element dimensions */
+  margin: 0;                /* remove browser default margins */
+  padding: 0;               /* remove browser default padding */
+}
+
+html {
+  width: 100%;              /* full viewport width */
+  overflow-x: hidden;       /* suppress horizontal scrollbar from overflow */
+}
+
+/*
+  body as a flex column:
+  – navbar takes its natural height
+  – hero gets all remaining viewport space via min-height on .hero
+  – subsequent sections stack below naturally
+*/
+body {
+  display: flex;            /* flex column so sections stack vertically */
+  flex-direction: column;   /* top-to-bottom stacking */
+  min-height: 100vh;        /* body at least fills the viewport */
+  width: 100%;              /* full viewport width */
+  overflow-x: hidden;       /* suppress horizontal scroll on all children */
+  font-family: 'Inter', sans-serif;   /* default body font */
+  background: #faf7f2;      /* very light warm white — visible between sections */
+  color: #333;              /* default text colour */
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  width: 100%;              /* spans full page width */
+  flex-shrink: 0;           /* never compress in flex column — always full height */
+  display: flex;            /* row layout for logo + links */
+  justify-content: space-between;   /* logo on left, links on right */
+  align-items: center;      /* vertically centre logo and links */
+  padding: 14px 48px;       /* vertical breathing room; horizontal inset */
+  background: var(--sage);  /* warm tan navbar background */
+  position: sticky;         /* sticks to top when scrolling */
+  top: 0;                   /* stick position — flush to viewport top */
+  z-index: 100;             /* above all page content */
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);   /* subtle drop shadow */
+}
+
+.logo {
+  display: flex;            /* stack logo lines vertically */
+  flex-direction: column;   /* main name above Sanskrit subtitle */
+  align-items: flex-start;  /* left-align both lines */
+  gap: 3px;                 /* tight gap between the two text lines */
+}
+
+.logo-main {
+  font-family: 'Cinzel', serif;   /* decorative serif for brand name */
+  font-size: 1.45rem;             /* prominent logo size */
+  font-weight: 700;               /* bold */
+  color: var(--deep-green);       /* olive green brand colour */
+  letter-spacing: 0.08em;         /* spaced out for elegance */
+  line-height: 1;                 /* tight line height — no extra space */
+}
+
+.logo-sub {
+  font-family: 'Noto Sans Devanagari', sans-serif;   /* Devanagari script font */
+  font-size: 1.1rem;              /* slightly smaller than main */
+  font-weight: 600;               /* semi-bold */
+  color: var(--deep-green);       /* matches main logo colour */
+  opacity: 0.9;                   /* slightly muted */
+  letter-spacing: 0.05em;         /* gentle spacing */
+  font-style: italic;             /* italic treatment */
+  line-height: 1;                 /* tight — no extra space below */
+}
+
+.navlinks {
+  display: flex;            /* row of links */
+  align-items: center;      /* vertically centre links and button */
+}
+
+.navlinks a {
+  margin-left: 28px;        /* space between each nav link */
+  text-decoration: none;    /* remove underline */
+  color: #3b3b2f;           /* dark olive — readable on sage bg */
+  font-family: 'Inter', sans-serif;   /* body font for nav links */
+  font-size: 0.88rem;       /* slightly smaller than body text */
+  letter-spacing: 0.03em;   /* subtle letter spacing */
+  font-weight: 400;         /* regular weight */
+  white-space: nowrap;      /* prevent links wrapping to next line */
+  transition: color 0.2s;   /* smooth colour transition on hover */
+}
+
+.navlinks a:hover { color: var(--deep-green); }   /* darken on hover */
+
+.nav-join {
+  background: var(--deep-green);    /* filled button — stands out from links */
+  color: #fff !important;           /* white text on dark background */
+  padding: 7px 18px;                /* pill-like padding */
+  border-radius: 4px;               /* slightly rounded corners */
+  font-weight: 500 !important;      /* medium weight */
+  transition: background 0.2s !important;   /* smooth hover */
+}
+
+.nav-join:hover { background: #3a4620 !important; }   /* darken on hover */
+
+/* ── HERO ── */
+/*
+  Hero height is decoupled from flex layout — it owns its size via min-height.
+  This means adding any number of sections below will never affect the hero.
+  --navbar-h is updated in :root if the navbar height ever changes.
+*/
+.hero {
+  flex-shrink: 0;                          /* never compress in body flex column */
+  min-height: calc(100vh - var(--navbar-h));   /* fills viewport minus navbar */
+  position: relative;                      /* stacking context for overlay + content */
+  width: 100vw;                            /* true viewport width — escapes flex container */
+  max-width: 100vw;                        /* prevent overflow beyond viewport */
+  margin-left: calc(50% - 50vw);          /* negative margin trick for full-bleed in flex */
+  display: flex;                           /* centres hero-content inside */
+  align-items: center;                     /* vertically centre content */
+  justify-content: center;                 /* horizontally centre content */
+  background-size: cover;                  /* image fills hero at any size */
+  background-position: center 59%;        /* vertical focal point — shows instructor face */
+  background-repeat: no-repeat;           /* no tile */
+}
+
+.hero::before {
+  content: '';                             /* pseudo-element — dark overlay on bg image */
+  position: absolute;                      /* covers entire hero */
+  inset: 0;                                /* top/right/bottom/left all 0 */
+  background: rgba(0, 0, 0, 0.42);        /* 42% dark tint for text legibility */
+  z-index: 0;                              /* below hero content */
+}
+
+.hero-content {
+  position: relative;                      /* above the ::before overlay */
+  z-index: 1;                              /* stacks above dark overlay */
+  display: flex;                           /* column: text block on top, button on bottom */
+  flex-direction: column;                  /* vertical stacking */
+  align-items: center;                     /* horizontally centre everything */
+  justify-content: space-between;          /* text block near top, button near bottom */
+  width: 100%;                             /* full hero width */
+  max-width: 1100px;                       /* cap width to prevent over-stretching on ultrawide */
+  height: 100%;                            /* fills full hero height for space-between to work */
+  padding: 0 48px;                         /* horizontal breathing room */
+  text-align: top;                         /* text alignment */
+  color: #fff;                             /* all hero text white */
+}
+
+.hero-text {
+  display: flex;            /* stack label, title, subtitle vertically */
+  flex-direction: column;   /* top-to-bottom */
+  align-items: center;      /* centred */
+}
+
+.hero-label {
+  display: block;
+  font-family: 'Cinzel', serif;   /* decorative serif for eyebrow label */
+  font-size: 1.5rem;              /* prominent eyebrow */
+  font-weight: 500;               /* medium weight */
+  letter-spacing: 0.15em;         /* wide spaced — editorial feel */
+  text-transform: uppercase;      /* all caps */
+  margin-bottom: 10px;            /* space before title */
+  opacity: 0.85;                  /* slightly muted against dark overlay */
+}
+
+.hero-title {
+  font-family: 'Cinzel', serif;           /* matches label font */
+  font-size: clamp(2.6rem, 5.5vw, 5.8rem);   /* fluid: min 2.6rem, max 5.8rem */
+  font-weight: 700;                        /* bold */
+  letter-spacing: 0.12em;                 /* spaced for grandeur */
+  line-height: 1.4;                        /* comfortable line height */
+  color: #fff;                             /* white */
+  margin-bottom: 2px;                      /* tight gap before subtitle */
+  white-space: nowrap;                     /* never wrap — prevents "YOG" breaking */
+}
+
+.hero-subtitle {
+  display: block;
+  font-family: 'Inter', sans-serif;   /* lighter body font for contrast with title */
+  font-size: 0.65rem;                 /* small — supporting text, not focal */
+  letter-spacing: 0.18em;             /* wide tracking — elegant */
+  font-style: italic;                 /* italic treatment */
+  font-weight: 100;                   /* thin weight */
+  opacity: 0.88;                      /* slightly muted */
+  line-height: 1.8;                   /* open line height */
+  text-transform: uppercase;          /* all caps */
+  margin-bottom: 50px;                /* space before CTA button */
+}
+
+.hero-btn {
+  display: inline-block;                          /* allows padding and sizing */
+  padding: 13px 44px;                             /* generous tap target */
+  border: 1.5px solid rgba(255, 255, 255, 0.8);  /* semi-transparent white border */
+  color: #fff;                                    /* white label */
+  text-decoration: none;                          /* no underline */
+  font-family: 'Cinzel', serif;                   /* matches hero heading family */
+  font-size: 0.7rem;                              /* small — refined */
+  letter-spacing: 0.38em;                         /* very wide tracking */
+  text-transform: uppercase;                      /* all caps */
+  transition: background 0.3s, color 0.3s, border-color 0.3s;   /* smooth hover */
+}
+
+.hero-btn:hover {
+  background: rgba(255, 255, 255, 0.9);   /* fills white on hover */
+  color: #2c2c2c;                          /* dark text on white background */
+  border-color: transparent;              /* hide border when filled */
+}
+
+/* ── ABOUT ── */
+.about {
+  background: var(--light-ivory);   /* light ivory — section background */
+  padding: 0 48px 72px;             /* no top padding — badge attaches to hero bottom */
+  display: flex;                    /* column layout for badge → box → image */
+  flex-direction: column;           /* vertical stacking */
+  align-items: center;              /* centre all children horizontally */
+  gap: 36px;                        /* space between badge, box, and image */
+}
+
+.about-badge {
+  background: var(--badge-bg);          /* distinct bg from section */
+  border-radius: 0 0 70px 70px;         /* top flush, bottom heavily rounded */
+  padding: 32px 40px;                   /* generous height and horizontal padding */
+  text-align: center;                   /* centre text */
+  width: 90%;                           /* nearly full section width */
+  max-width: 90%;                       /* same cap */
+}
+
+.about-badge-title {
+  font-family: 'Cinzel', serif;   /* decorative serif */
+  font-size: 1.3rem;              /* prominent badge heading */
+  font-weight: 600;               /* semi-bold */
+  letter-spacing: 0.22em;         /* wide tracking */
+  text-transform: uppercase;      /* all caps */
+  color: var(--deep-green);       /* olive green */
+  margin-bottom: 8px;             /* gap before subtitle */
+}
+
+.about-badge-sub {
+  font-family: 'Inter', sans-serif;   /* body font */
+  font-size: 0.84rem;                 /* small supporting text */
+  font-style: italic;                 /* italic */
+  font-weight: 300;                   /* light weight */
+  color: #5a5040;                     /* muted warm brown */
+  line-height: 1.5;                   /* comfortable reading */
+}
+
+.about-box {
+  background: var(--about-box-bg);    /* distinct bg from section */
+  border: 3px dashed #423504;         /* thick dark dashed border */
+  border-radius: 4px;                 /* very slight rounding */
+  padding: 40px 52px;                 /* generous internal padding */
+  max-width: 90%;                     /* nearly full section width */
+  width: 100%;                        /* stretches to max-width */
+  text-align: center;                 /* centre heading and body text */
+}
+
+.about-heading {
+  font-family: 'Cinzel', serif;   /* decorative serif heading */
+  font-size: 1.7rem;              /* large section heading */
+  font-weight: 700;               /* bold */
+  letter-spacing: 0.14em;         /* spaced */
+  text-transform: uppercase;      /* all caps */
+  color: var(--deep-green);       /* olive green */
+  margin-bottom: 22px;            /* space before body text */
+}
+
+.about-text {
+  font-family: 'Inter', sans-serif;   /* body font */
+  font-size: 0.9rem;                  /* comfortable reading size */
+  line-height: 1.9;                   /* open line height for readability */
+  color: #4a4438;                     /* warm dark brown */
+  white-space: pre-line;              /* honour \n\n paragraph breaks from JSON */
+}
+
+.about-image-wrap {
+  max-width: 600px;   /* constrain image — not full width */
+  width: 100%;        /* responsive within max-width */
+}
+
+.about-image {
+  width: 100%;        /* fills the wrapper */
+  height: auto;       /* maintain natural aspect ratio */
+  display: block;     /* remove inline baseline gap */
+}
+
+/* ── WHY JOIN US ── */
+.why-join {
+  background: var(--wj-bg);      /* sage green section background */
+  padding: 0 48px 72px;          /* no top — badge attaches flush to section 2 */
+  display: flex;                  /* column layout */
+  flex-direction: column;         /* vertical stacking */
+  align-items: center;            /* centre children */
+  gap: 40px;                      /* space between badge and image grid */
+}
+
+.wj-badge {
+  background: var(--wj-badge-bg);    /* darker green tint badge */
+  border-radius: 0 0 70px 70px;      /* top flush, bottom heavily rounded */
+  padding: 32px 48px;                /* generous height */
+  text-align: center;                /* centre text */
+  width: 90%;                        /* nearly full width */
+  max-width: 90%;                    /* same cap */
+}
+
+.wj-heading {
+  font-family: 'Cinzel', serif;   /* decorative serif */
+  font-size: 1.5rem;              /* prominent section heading */
+  font-weight: 700;               /* bold */
+  letter-spacing: 0.14em;         /* spaced */
+  text-transform: uppercase;      /* all caps */
+  color: var(--deep-green);       /* olive green */
+  margin-bottom: 12px;            /* gap before subtitle */
+}
+
+.wj-sub {
+  font-family: 'Inter', sans-serif;   /* body font */
+  font-size: 0.88rem;                 /* small subtitle */
+  font-style: italic;                 /* italic */
+  font-weight: 300;                   /* light weight */
+  color: #4a4a3a;                     /* warm dark */
+  line-height: 1.7;                   /* open line height */
+}
+
+/* Outer dashed container — wraps ALL images */
+.wj-grid-wrap {
+  background: var(--wj-grid-bg);          /* light blue background inside dashed border */
+  border: 2.5px dashed var(--wj-grid-border);   /* dashed border around all images */
+  padding: 16px;                           /* inner breathing room */
+  width: 100%;                             /* full available width */
+  max-width: 90%;                          /* cap at 90% of section */
+}
+
+.wj-grid {
+  display: grid;                           /* CSS grid for image layout */
+  grid-template-columns: 1fr 1fr 1fr;     /* 3 equal columns */
+  grid-template-rows: auto auto;           /* rows size to landscape image content */
+  gap: 20px;                              /* space between all grid cells */
+  align-items: stretch;                   /* cells stretch to row height */
+}
+
+/* Explicit placement: L1-L4 fill left 2 cols, R1 portrait spans full right col */
+#wj-l1 { grid-column: 1; grid-row: 1; }            /* top-left landscape */
+#wj-l2 { grid-column: 2; grid-row: 1; }            /* top-centre landscape */
+#wj-l3 { grid-column: 1; grid-row: 2; }            /* bottom-left landscape */
+#wj-l4 { grid-column: 2; grid-row: 2; }            /* bottom-centre landscape */
+#wj-r1 { grid-column: 3; grid-row: 1 / 3; align-self: stretch; }   /* portrait spans both rows */
+
+/* Landscape: full width, natural height — no cropping */
+.wj-landscape {
+  width: 100%;      /* fills grid cell width */
+  height: auto;     /* natural aspect ratio — no cropping */
+  display: block;   /* remove inline baseline gap */
+}
+
+/* Portrait: fills the full spanned row height naturally */
+.wj-portrait-img {
+  width: 100%;           /* fills column width */
+  height: 100%;          /* fills full spanned row height */
+  object-fit: cover;     /* crop to fill without distortion */
+  display: block;        /* remove inline baseline gap */
+}
+
+/* ── INSTRUCTOR ── */
+.instructor {
+  background: var(--instructor-bg);   /* warm cream section background */
+  padding: 0 28px 72px;               /* no top — badge attaches flush to section 3 */
+  display: flex;                      /* column layout */
+  flex-direction: column;             /* vertical stacking */
+  align-items: center;                /* centre children */
+  gap: 40px;                          /* space between badge and content row */
+}
+
+.instructor-badge {
+  background: var(--instructor-badge-bg);   /* warm tan badge background */
+  border-radius: 0 0 70px 70px;             /* top flush, bottom heavily rounded */
+  padding: 55px 48px;                       /* tall badge with generous padding */
+  text-align: center;                       /* centre heading */
+  width: 90%;                               /* nearly full width */
+  max-width: 90%;                           /* same cap */
+}
+
+.instructor-heading {
+  font-family: 'Cinzel', serif;   /* decorative serif */
+  font-size: 1.5rem;              /* prominent heading */
+  font-weight: 600;               /* semi-bold */
+  letter-spacing: 0.04em;         /* tighter — sentence case looks better with less spacing */
+  color: var(--deep-green);       /* olive green */
+}
+
+.instructor-content {
+  display: flex;              /* row: text column left, images column right */
+  gap: 40px;                  /* space between text and images */
+  width: 100%;                /* full section width */
+  max-width: 1140px;          /* wide content area so text sits further left */
+  align-items: flex-start;    /* both columns start from the top */
+}
+
+.instructor-text {
+  flex: 1;                    /* 50% of content width */
+  align-self: flex-start;     /* shrinks to text height — doesn't stretch to images height */
+  background: var(--instructor-text-bg);   /* peach background */
+  border-radius: 32px;        /* heavily rounded edges */
+  padding: 32px;              /* internal breathing room */
+  font-family: 'Inter', sans-serif;   /* body font */
+  font-size: 0.9rem;          /* comfortable reading size */
+  line-height: 1.9;           /* open for readability */
+  color: #4a4438;             /* warm dark brown */
+  white-space: pre-line;      /* honour \n\n paragraph breaks from JSON */
+}
+
+.instructor-images {
+  flex: 1;                    /* 50% of content width */
+  display: flex;              /* row: main image left, action image right */
+  gap: -2px;                  /* near-zero gap — images almost touch */
+  align-items: flex-start;    /* both images align to top */
+}
+
+/* Main image (Yoga Institute.jpg) — quote overlay anchored to this */
+.instructor-img-main-wrap {
+  position: relative;   /* stacking context for absolutely positioned quote overlay */
+  flex: 1;              /* half the images column width */
+}
+
+.instructor-img-main {
+  width: 80%;           /* slightly less than full flex cell — breathing room */
+  aspect-ratio: 3 / 4; /* portrait ratio — consistent with Kasuali.jpg */
+  object-fit: cover;    /* crop to fill aspect ratio without distortion */
+  display: block;       /* remove inline baseline gap */
+  border-radius: 16px;  /* rounded corners */
+}
+
+/* Quote overlay — top-right corner of main image, appears above Kasuali via z-index */
+.instructor-quote {
+  position: absolute;                              /* positioned relative to .instructor-img-main-wrap */
+  top: -30px;                                      /* lifts overlay slightly above the image top */
+  right: -250px;                                   /* overlaps into the Kasuali image area */
+  background: transparent;                         /* no fill — outline only */
+  border: 2.5px solid var(--instructor-quote-border);   /* thick green outline */
+  border-radius: 10px;                             /* rounded corners */
+  padding: 8px 14px;                               /* compact internal padding */
+  width: 360px;                                    /* wide enough for quote in 1-2 lines */
+  z-index: 3;                                      /* above both images */
+  transform: rotate(-5deg);                        /* tilt — right side lifted, left side lower */
+  transform-origin: top right;                     /* rotate from top-right anchor point */
+}
+
+/* Large decorative opening quote mark */
+.instructor-quote::before {
+  content: '\201C';                          /* " opening double quote */
+  font-family: 'Cinzel', serif;              /* decorative serif for quote mark */
+  font-size: 2rem;                           /* large decorative size */
+  line-height: 0.8;                          /* tight — doesn't add much vertical space */
+  color: var(--instructor-quote-border);     /* matches border colour */
+  display: block;                            /* own line above quote text */
+  margin-bottom: 2px;                        /* tiny gap before text */
+}
+
+.instructor-quote-l1 {
+  font-family: 'Inter', sans-serif;   /* body font */
+  font-size: 0.72rem;                 /* small — fits constrained overlay */
+  font-style: italic;                 /* italic quote style */
+  line-height: 1.55;                  /* comfortable */
+  color: #3a3028;                     /* warm dark */
+  display: block;                     /* own line */
+}
+
+.instructor-quote-l2 {
+  font-family: 'Inter', sans-serif;   /* same font as line 1 */
+  font-size: 0.72rem;                 /* same size */
+  font-style: italic;                 /* italic */
+  line-height: 1.55;
+  color: #3a3028;
+  display: block;                     /* own line — padding-left works correctly on block */
+  padding-left: 30%;                  /* starts from roughly the centre of the overlay */
+}
+
+/* Icon injected via CSS — guaranteed inline at end of line 2 */
+.instructor-quote-l2::after {
+  content: ' 🌿';
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+/* Action image (Kasuali.jpg) — same size as main, offset lower */
+.instructor-img-action-wrap {
+  flex: 1;              /* half the images column width */
+  margin-top: 90px;     /* pushes Kasuali lower — staggered look */
+  z-index: 1;           /* below the quote overlay (z-index: 3) */
+  position: relative;   /* establishes stacking context for z-index to work */
+}
+
+.instructor-img-action {
+  width: 80%;           /* matches main image width */
+  aspect-ratio: 3 / 4; /* same portrait ratio as main image — equal sizes */
+  object-fit: cover;    /* crop to fill without distortion */
+  display: block;       /* remove inline baseline gap */
+  border-radius: 16px;  /* rounded corners — matches main image */
+}
+
+/* ── GALLERY ── */
+.gallery {
+  background: var(--gallery-bg);   /* deep warm brown */
+  padding: 0 48px 36px;            /* reduced bottom padding — shorter section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;                       /* tighter gap between badge and grid */
+}
+
+.gallery-badge {
+  background: var(--gallery-badge-bg);   /* slightly lighter dark brown */
+  border-radius: 0 0 70px 70px;          /* top flush, bottom heavily rounded */
+  padding: 20px 48px;                    /* reduced vertical padding — shorter badge */
+  text-align: center;
+  width: 90%;
+  max-width: 90%;
+}
+
+.gallery-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gallery-text-light);   /* light ivory on dark bg */
+  margin-bottom: 12px;
+}
+
+.gallery-sanskrit {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gallery-text-light);
+  opacity: 0.88;
+  margin-bottom: 4px;
+}
+
+.gallery-translation {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gallery-text-light);
+  opacity: 0.70;
+  text-align: center;
+}
+
+/* Scalable grid — add keys to assets.json and images appear automatically */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 500px));   /* fixed-width columns — controls image size */
+  justify-content: center;                              /* centres the 3-column group in the full-width panel */
+  gap: 32px;                     /* generous gap — background shows between images */
+  width: 100vw;                  /* full-bleed — breaks out of section padding */
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);/* negative margin trick — same as hero */
+  padding: 10px 40px;            /* reduced vertical padding — shorter grid area */
+  background-size: cover;        /* botanical bg fills full width */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;      /* uniform size across all images */
+  object-fit: cover;         /* fills the fixed ratio without distortion */
+  display: block;
+  border-radius: 70px;       /* prominent round edges */
+}
+
+/* ── PATH OF PRACTICE ── */
+.classes {
+  background: var(--classes-bg);   /* warm off-white section background */
+  padding: 0 0 72px;               /* no top — badge attaches flush to section 4; no side padding — carousel bleeds wide */
+  display: flex;                   /* column layout */
+  flex-direction: column;          /* vertical stacking */
+  align-items: center;             /* centre badge and carousel */
+  gap: 40px;                       /* space between badge and carousel */
+}
+
+.classes-badge {
+  background: var(--classes-badge-bg);   /* warm tan badge */
+  border-radius: 0 0 70px 70px;          /* top flush, bottom heavily rounded */
+  padding: 52px 48px;                    /* generous height */
+  text-align: center;                    /* centre heading */
+  width: 90%;                            /* nearly full width */
+  max-width: 90%;                        /* same cap */
+}
+
+.classes-heading {
+  font-family: 'Cinzel', serif;   /* decorative serif */
+  font-size: 1.5rem;              /* prominent */
+  font-weight: 600;               /* semi-bold */
+  letter-spacing: 0.04em;         /* tight — sentence case */
+  color: var(--deep-green);       /* olive green */
+}
+
+/* Carousel wrapper — holds prev button, track, next button */
+.classes-carousel-outer {
+  display: flex;                  /* row: btn | track | btn */
+  align-items: center;            /* vertically centre arrows with cards */
+  gap: 14px;                      /* space between arrows and track */
+  width: 100%;
+  max-width: 1140px;              /* matches instructor-content width */
+  padding: 0 28px;                /* horizontal breathing room */
+}
+
+/* Scrollable card track */
+.classes-carousel {
+  display: flex;                         /* horizontal row of cards */
+  gap: 20px;                             /* space between cards */
+  overflow-x: auto;                      /* enable horizontal scroll */
+  scroll-snap-type: x mandatory;         /* snap to each card */
+  scroll-behavior: smooth;               /* smooth arrow-button scrolling */
+  -webkit-overflow-scrolling: touch;     /* smooth momentum on iOS */
+  flex: 1;                               /* fills space between the two buttons */
+  scrollbar-width: none;                 /* hide scrollbar Firefox */
+  -ms-overflow-style: none;              /* hide scrollbar IE */
+  padding-bottom: 8px;                   /* room so card shadow isn't clipped */
+}
+
+.classes-carousel::-webkit-scrollbar { display: none; }   /* hide scrollbar Chrome/Safari */
+
+/* Individual class card */
+.class-card {
+  flex: 0 0 210px;              /* fixed width — won't shrink */
+  scroll-snap-align: start;     /* snaps card left edge to track left edge */
+  position: relative;           /* stacking context for label and hover overlay */
+  border-radius: 16px;          /* rounded card */
+  overflow: hidden;             /* clips image, label, and hover to rounded corners */
+  cursor: pointer;              /* pointer on hover */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);   /* subtle card shadow */
+}
+
+.class-card img {
+  width: 100%;                  /* fills card width */
+  aspect-ratio: 2 / 3;          /* portrait ratio */
+  object-fit: cover;            /* crop to fill */
+  display: block;               /* remove inline gap */
+}
+
+/* Class name label — always visible at bottom of card */
+.class-label {
+  position: absolute;           /* sits inside the card at the bottom */
+  bottom: 0;                    /* flush to card bottom */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.48);   /* semi-transparent dark bar */
+  color: #fff;                       /* white text */
+  font-family: 'Cinzel', serif;      /* decorative serif */
+  font-size: 0.75rem;                /* small label */
+  letter-spacing: 0.1em;             /* spaced */
+  text-transform: uppercase;         /* all caps */
+  padding: 10px 12px;                /* comfortable tap target */
+  text-align: center;
+}
+
+/* Hover overlay — revealed on card hover */
+.class-hover {
+  position: absolute;           /* covers full card */
+  inset: 0;                     /* top/right/bottom/left all 0 */
+  background: var(--classes-hover-bg);   /* dark tint */
+  display: flex;                /* column: name, timings, fees, CTA */
+  flex-direction: column;       /* vertical stack */
+  align-items: center;          /* horizontally centre */
+  justify-content: center;      /* vertically centre */
+  gap: 10px;                    /* space between items */
+  padding: 20px 16px;           /* inner breathing room */
+  opacity: 0;                   /* hidden by default */
+  transition: opacity 0.3s ease;   /* smooth fade in */
+  text-align: center;
+}
+
+.class-card:hover .class-hover { opacity: 1; }   /* reveal on hover */
+
+.class-hover-name {
+  font-family: 'Cinzel', serif;    /* decorative heading */
+  font-size: 0.88rem;              /* slightly larger than body */
+  font-weight: 600;                /* semi-bold */
+  color: #fff;                     /* white */
+  letter-spacing: 0.08em;          /* spaced */
+  text-transform: uppercase;       /* all caps */
+}
+
+.class-hover-timings {
+  font-family: 'Inter', sans-serif;   /* body font */
+  font-size: 0.75rem;                 /* small */
+  color: rgba(255, 255, 255, 0.88);   /* slightly muted white */
+  line-height: 1.5;
+}
+
+.class-hover-fees {
+  font-family: 'Inter', sans-serif;   /* body font */
+  font-size: 0.78rem;                 /* slightly larger than timings */
+  font-weight: 500;                   /* medium — fee is important info */
+  color: #fff;
+}
+
+.class-hover-cta {
+  display: inline-block;          /* allows padding */
+  margin-top: 6px;                /* gap above button */
+  padding: 8px 20px;              /* comfortable tap target */
+  background: var(--deep-green);  /* olive green button */
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.class-hover-cta:hover { background: #e8720a; }   /* bright saffron-orange on hover */
+
+/* Carousel prev/next arrow buttons */
+.carousel-btn {
+  background: var(--deep-green);   /* olive green */
+  color: #fff;
+  border: none;
+  border-radius: 50%;              /* circular button */
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;               /* large arrow character */
+  cursor: pointer;
+  flex-shrink: 0;                  /* never squish */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.carousel-btn:hover { background: #3a4620; }   /* darker on hover */
+
+/* ── TESTIMONIALS & CONTACT ── */
+.testimonials {
+  background: var(--testimonials-bg);   /* solid dark brown — fused flush from gallery */
+  padding: 0 0 72px;                    /* no top — badge flush to gallery bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;                            /* generous space between badge, carousel, contact */
+}
+
+.testimonials-badge {
+  background: var(--testimonials-badge-bg);   /* deeper dark brown badge */
+  border-radius: 0 0 70px 70px;               /* top flush, bottom heavily rounded — same pattern */
+  padding: 32px 48px;
+  text-align: center;
+  width: 90%;
+  max-width: 90%;
+}
+
+.testimonials-heading {
+  font-family: 'Cinzel', serif;          /* decorative serif */
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gallery-text-light);      /* warm ivory on dark bg */
+}
+
+/* Carousel outer wrapper — same pattern as classes carousel */
+.testimonials-carousel-outer {
+  display: flex;                         /* row: btn | track | btn */
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 28px;
+}
+
+/* Scrollable testimonial track */
+.testimonials-carousel {
+  display: flex;
+  gap: 28px;                             /* wider gap for breathing room between cards */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 16px 4px 20px;               /* vertical padding so card shadow/border isn't clipped */
+}
+
+.testimonials-carousel::-webkit-scrollbar { display: none; }   /* hide scrollbar Chrome/Safari */
+
+/* Individual testimonial card */
+.testimonial-card {
+  flex: 0 0 280px;                       /* fixed width — won't shrink */
+  scroll-snap-align: start;
+  background: var(--testimonials-card-bg);            /* warm beige */
+  border: 2.5px solid var(--testimonials-card-border);/* warm tan outline — the "large decorative outline" */
+  border-radius: 20px;                   /* rounded card */
+  padding: 40px 28px 28px;              /* extra top padding for decorative quote mark */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;                    /* stacking context for ::before quote mark */
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);   /* subtle card lift on dark bg */
+}
+
+/* Large decorative opening quote mark */
+.testimonial-card::before {
+  content: '\201C';                       /* " opening double quote */
+  font-family: 'Cinzel', serif;
+  font-size: 5rem;                        /* large decorative — visually dominant */
+  line-height: 1;
+  color: var(--testimonials-card-border); /* matches card border — warm tan */
+  opacity: 0.45;                          /* muted so it doesn't overpower text */
+  position: absolute;
+  top: 8px;
+  left: 18px;
+}
+
+.testimonial-quote {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  line-height: 1.85;
+  color: #4a3828;                         /* warm dark brown */
+}
+
+.testimonial-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #3d2b1f;                         /* dark brown */
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+
+.testimonial-since {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 300;
+  color: #7a5c48;                         /* muted warm brown */
+  font-style: italic;
+}
+
+/* ── CONTACT BOXES ── */
+.contact-boxes {
+  display: flex;                          /* 3 equal boxes side by side */
+  gap: 24px;
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 28px;
+}
+
+/* Shared base for all 3 boxes */
+.contact-box {
+  flex: 1;                                /* equal width */
+  border-radius: 20px;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  text-decoration: none;                  /* for anchor-based boxes */
+}
+
+/* Text / info box */
+.contact-box--text {
+  background: var(--contact-text-bg);    /* slightly lighter dark brown */
+}
+
+.contact-box-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--gallery-text-light);      /* warm ivory */
+}
+
+.contact-box-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(240, 234, 216, 0.78);      /* muted ivory */
+  white-space: pre-line;                  /* honour \n breaks from JSON */
+}
+
+/* WhatsApp box */
+.contact-box--wa {
+  background: var(--contact-wa-bg);      /* WhatsApp green */
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.contact-box--wa:hover { filter: brightness(1.08); }   /* brighten on hover */
+
+/* Instagram box */
+.contact-box--ig {
+  background: var(--contact-ig-bg);      /* Instagram pink */
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.contact-box--ig:hover { filter: brightness(1.08); }   /* brighten on hover */
+
+.contact-box-icon-img {
+  width: 44px;                            /* consistent icon size */
+  height: 44px;
+  object-fit: contain;                    /* preserve aspect ratio */
+  display: block;
+}
+
+.contact-box-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+
+.contact-box-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.contact-box-cta {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 9px 22px;
+  background: rgba(255, 255, 255, 0.22);   /* translucent white pill */
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  transition: background 0.2s;
+}
+
+.contact-box-cta:hover { background: rgba(255, 255, 255, 0.38); }
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 900px) {
+  .navbar { padding: 13px 28px; }              /* reduce navbar side padding */
+  .navlinks a { margin-left: 20px; }           /* tighter link spacing */
+  .wj-grid { grid-template-rows: 170px 170px; }   /* shorter rows on medium screens */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;   /* compact navbar */
+    flex-wrap: wrap;       /* allow logo + links to wrap to second line */
+    gap: 8px;              /* gap when wrapped */
+  }
+  .navlinks {
+    flex-wrap: wrap;   /* links wrap onto multiple lines if needed */
+    gap: 4px;          /* tight gap between wrapped links */
+  }
+  .navlinks a { margin-left: 0; font-size: 0.82rem; }   /* no margin (flex gap handles spacing) */
+  .nav-join   { padding: 6px 14px; }                    /* slightly smaller button */
+  .hero-content  { padding: 0 24px; }                   /* narrower hero content padding */
+  .hero-title    { letter-spacing: 0.08em; }            /* tighter title tracking on mobile */
+  .hero-subtitle { letter-spacing: 0.1em; }             /* tighter subtitle tracking */
+  .about         { padding: 0 28px 56px; gap: 28px; }   /* reduced padding and gaps */
+  .about-badge   { padding: 16px 28px; }                /* shorter badge */
+  .about-box     { padding: 32px 28px; }                /* less side padding */
+  /* Why Join Us – collapse portrait to bottom row on tablet */
+  .why-join      { padding: 0 28px 56px; gap: 28px; }
+  .wj-badge      { padding: 24px 28px; }
+  .wj-grid {
+    grid-template-columns: 1fr 1fr;       /* 2 columns instead of 3 */
+    grid-template-rows: auto auto auto;   /* 3 rows: 2 landscape rows + portrait row */
+  }
+  #wj-l1 { grid-column: 1; grid-row: 1; }          /* top-left */
+  #wj-l2 { grid-column: 2; grid-row: 1; }          /* top-right */
+  #wj-l3 { grid-column: 1; grid-row: 2; }          /* bottom-left */
+  #wj-l4 { grid-column: 2; grid-row: 2; }          /* bottom-right */
+  #wj-r1 { grid-column: 1 / 3; grid-row: 3; height: auto; }   /* portrait spans full width, row 3 */
+  /* Instructor – stack columns vertically on tablet */
+  .instructor         { padding: 0 28px 56px; gap: 28px; }
+  .instructor-content { flex-direction: column; }      /* text above, images below */
+  .instructor-quote   { right: 8px; width: 140px; }    /* constrain overlay on smaller screen */
+  /* Classes */
+  .classes-carousel-outer { padding: 0 16px; gap: 10px; }
+  .class-card             { flex: 0 0 180px; }         /* slightly narrower cards on tablet */
+  /* Gallery */
+  .gallery       { padding: 0 28px 56px; gap: 28px; }
+  .gallery-grid  { grid-template-columns: repeat(2, 1fr); gap: 12px; }   /* 2 cols on tablet */
+  /* Testimonials & Contact */
+  .testimonials              { padding: 0 0 56px; gap: 36px; }
+  .testimonials-carousel-outer { padding: 0 16px; gap: 10px; }
+  .testimonial-card          { flex: 0 0 240px; }
+  .contact-boxes             { flex-direction: column; padding: 0 28px; }   /* stack on tablet */
+}
+
+@media (max-width: 480px) {
+  .navbar { padding: 10px 16px; gap: 6px; }                /* minimal navbar */
+  .logo-main { font-size: 1.2rem; }                        /* smaller logo */
+  .logo-sub  { font-size: 0.9rem; }                        /* smaller Sanskrit text */
+  .navlinks a { font-size: 0.76rem; letter-spacing: 0; }   /* compact links */
+  .nav-join   { padding: 5px 12px; font-size: 0.76rem !important; }   /* compact button */
+  .hero-content  { padding: 0 16px; }                      /* minimal hero padding */
+  .hero-label    { font-size: 0.62rem; letter-spacing: 0.3em; }
+  .hero-title    { font-size: clamp(2rem, 9vw, 3rem); letter-spacing: 0.06em; }
+  .hero-subtitle { font-size: 0.72rem; letter-spacing: 0.08em; }
+  .hero-btn      { padding: 11px 28px; font-size: 0.62rem; letter-spacing: 0.25em; }
+  .about         { padding: 0 16px 40px; gap: 22px; }
+  .about-badge   { padding: 14px 20px; border-radius: 10px; }   /* less round on mobile */
+  .about-badge-title { font-size: 0.8rem; letter-spacing: 0.15em; }
+  .about-badge-sub   { font-size: 0.65rem; }
+  .about-box     { padding: 24px 20px; }
+  .about-heading { font-size: 1.35rem; }
+  .about-text    { font-size: 0.84rem; }
+  /* Why Join Us mobile */
+  .why-join      { padding: 0 16px 40px; gap: 20px; }
+  .wj-badge      { padding: 20px 16px; }
+  .wj-heading    { font-size: 1.2rem; }
+  .wj-sub        { font-size: 0.78rem; }
+  .wj-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  #wj-r1 { grid-column: 1 / 3; grid-row: 3; height: auto; }
+  /* Instructor mobile */
+  .instructor       { padding: 0 16px 40px; gap: 20px; }
+  .instructor-badge { padding: 20px 16px; }
+  .instructor-heading { font-size: 1.2rem; }
+  .instructor-quote { width: 130px; font-size: 0.66rem; right: 6px; }   /* compact overlay */
+  .instructor-img-action-wrap { margin-top: 32px; }   /* less offset on mobile */
+  /* Classes mobile */
+  .classes              { padding: 0 0 40px; gap: 24px; }
+  .classes-carousel-outer { padding: 0 12px; gap: 8px; }
+  .class-card           { flex: 0 0 155px; }           /* narrower on mobile */
+  .carousel-btn         { width: 32px; height: 32px; font-size: 1.1rem; }
+  /* Gallery mobile */
+  .gallery       { padding: 0 16px 40px; gap: 20px; }
+  .gallery-grid  { grid-template-columns: 1fr; gap: 10px; }   /* single column on mobile */
+  .gallery-heading { font-size: 1.2rem; }
+  /* Testimonials & Contact mobile */
+  .testimonials              { padding: 0 0 40px; gap: 28px; }
+  .testimonials-carousel-outer { padding: 0 12px; gap: 8px; }
+  .testimonial-card          { flex: 0 0 220px; }
+  .testimonials-heading      { font-size: 1.2rem; }
+  .contact-boxes             { padding: 0 16px; gap: 16px; }
+}
