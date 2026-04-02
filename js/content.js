@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
             +   '<span class="class-hover-name">'    + item.name      + '</span>'
             +   '<span class="class-hover-timings">' + item.timings   + '</span>'
             +   '<span class="class-hover-fees">'    + item.fees      + '</span>'
-            +   '<a href="' + item.cta_href + '" class="class-hover-cta">' + item.cta_label + '</a>'
+            +   '<a href="' + item.cta_href + '?class=' + encodeURIComponent(item.key) + '" class="class-hover-cta">' + item.cta_label + '</a>'
             + '</div>'
             + '</div>';
         }).join('');

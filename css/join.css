@@ -1,0 +1,419 @@
+/* ── JOIN PAGE — STANDALONE STYLES ── */
+/* This file is used exclusively by html/join.html.
+   It does not depend on css/styles.css.
+   All variables, resets, and components are self-contained. */
+
+/* ── VARIABLES ── */
+:root {
+  --j-bg:              #f6f3ec;   /* warm off-white page background */
+  --j-nav-bg:          #cbc3a8;   /* warm tan navbar */
+  --j-deep-green:      #4e5b2c;   /* olive green — primary accent */
+  --j-text:            #3a3028;   /* warm dark brown — body text */
+  --j-muted:           #7a6a58;   /* muted warm brown — secondary text */
+  --j-hero-overlay:    rgba(0, 0, 0, 0.52);   /* dark tint over class image */
+  --j-card-bg:         #fff;       /* plan card background */
+  --j-card-border:     #e0d8cc;   /* subtle warm border */
+  --j-card-active-bg:  #4e5b2c;   /* selected plan — dark green fill */
+  --j-card-active-text:#fff;       /* selected plan — white text */
+  --j-detail-bg:       #f0ece3;   /* plan detail table background */
+  --j-wa-green:        #25d366;   /* WhatsApp button green */
+  --j-navbar-h:        56px;       /* matches navbar height on index.html and blog.html */
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { overflow-x: hidden; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--j-bg);
+  color: var(--j-text);
+  min-height: 100vh;
+}
+
+/* ── NAVBAR ── */
+.j-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: var(--j-navbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  background: var(--j-nav-bg);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.j-logo-img {
+  height: 56px;   /* matches --j-navbar-h exactly */
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;   /* white JPEG background blends into sage navbar */
+}
+
+.j-back-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #3b3b2f;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.j-back-link:hover { color: var(--j-deep-green); }
+
+/* ── CLASS HERO ── */
+.j-class-hero {
+  position: relative;           /* stacking context for overlay + content */
+  width: 100%;
+  background-color: #3d2b1f;   /* fallback while image loads */
+}
+
+/* Constrained hero image — full image visible, capped at 420px tall */
+.j-class-hero-img {
+  width: 100%;
+  max-height: 420px;            /* cap height — reduces size without cropping */
+  object-fit: contain;          /* shrinks to fit within the cap, never crops */
+  display: block;
+  background-color: #dcd0c8;   /* fills letterbox gaps if image is narrower than viewport */
+}
+
+/* Dark overlay on top of the image */
+.j-class-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--j-hero-overlay);
+}
+
+/* Text content anchored to bottom of hero */
+.j-class-hero-content {
+  position: absolute;           /* overlays on top of image + overlay */
+  bottom: 0;
+  left: 0;                      /* anchored to left edge of section */
+  right: auto;
+  z-index: 1;
+  max-width: 50%;               /* stays in left letterbox zone, ends before image pixels start */
+  padding: 0 10px 36px 120px;
+}
+
+.j-class-name {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.j-class-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.j-class-timings {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.04em;
+}
+
+.j-class-fees {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--j-deep-green);
+  padding: 4px 14px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+/* ── PLAN SELECTION ── */
+.j-plans-section {
+  padding: 56px 5% 72px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  transition: gap 0.4s ease, justify-content 0s;
+}
+
+/* When a plan is selected — left card narrows, right panel slides in */
+.j-plans-section.plan-selected {
+  justify-content: center;
+  gap: 48px;
+}
+
+.j-plans-card {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  transition: max-width 0.4s ease;
+  flex-shrink: 0;
+}
+
+.plan-selected .j-plans-card {
+  max-width: 460px;
+  align-items: flex-start;   /* left-align contents when in split view */
+}
+
+.j-plans-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--j-deep-green);
+  text-align: center;
+}
+
+/* Plan cards grid — always single row, cards share width equally */
+.j-plans-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;      /* never break to next line */
+  width: 100%;
+}
+
+.plan-card {
+  flex: 1 1 0;      /* equal share of available width — never uses a min-width basis */
+  min-width: 0;     /* allows shrinking below content width without wrapping */
+  background: var(--j-card-bg);
+  border: 2px solid var(--j-card-border);
+  border-radius: 16px;
+  padding: 40px 32px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.plan-card:hover {
+  border-color: var(--j-deep-green);
+  transform: translateY(-3px);
+}
+
+.plan-card.active {
+  background: var(--j-card-active-bg);
+  border-color: var(--j-card-active-bg);
+  color: var(--j-card-active-text);
+  transform: translateY(-3px);
+}
+
+.plan-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.plan-price {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--j-deep-green);
+}
+
+.plan-card.active .plan-price { color: rgba(255, 255, 255, 0.9); }
+
+.plan-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--j-muted);
+}
+
+.plan-card.active .plan-desc { color: rgba(255, 255, 255, 0.72); }
+
+/* Plan detail table */
+.j-plan-details {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--j-detail-bg);
+  border: 1.5px solid var(--j-card-border);
+}
+
+.j-plan-details.hidden { display: none; }
+
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+}
+
+.plan-table tr:not(:last-child) td {
+  border-bottom: 1px solid var(--j-card-border);
+}
+
+.plan-table td {
+  padding: 12px 20px;
+  color: var(--j-text);
+  line-height: 1.5;
+}
+
+.plan-table td:first-child {
+  font-weight: 500;
+  color: var(--j-deep-green);
+  width: 110px;
+  white-space: nowrap;
+}
+
+/* WhatsApp booking button */
+.j-pay-btn {
+  display: inline-flex;
+  flex-direction: column;   /* icon stacks above text */
+  align-items: center;
+  gap: 5px;
+  padding: 5px 15px;
+  background: var(--j-wa-green);
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.j-pay-btn:hover { filter: brightness(1.08); }
+
+.j-pay-btn.hidden { display: none; }
+
+.j-pay-btn-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ── PLAN DETAIL PANEL (right column) ── */
+.j-plan-detail-panel {
+  flex: 0 0 0;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width 0.4s ease, opacity 0.35s ease 0.15s;
+}
+
+.plan-selected .j-plan-detail-panel {
+  flex: 1;
+  max-width: 520px;
+  overflow: visible;
+  opacity: 1;
+}
+
+.j-detail-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 8px 0;
+}
+
+.j-detail-plan-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--j-deep-green);
+}
+
+.j-detail-ideal-for {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--j-muted);
+  border-left: 3px solid var(--j-deep-green);
+  padding-left: 14px;
+}
+
+.j-detail-section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--j-deep-green);
+  margin-bottom: 14px;
+}
+
+.j-detail-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.j-detail-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--j-text);
+  padding-left: 22px;
+  position: relative;
+}
+
+.j-detail-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--j-deep-green);
+  font-weight: 500;
+}
+
+.j-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.j-detail-tag {
+  background: #eef2e8;
+  color: var(--j-deep-green);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid #c8d4bc;
+  white-space: nowrap;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .j-navbar              { padding: 0 24px; }
+  .j-class-hero          { height: 260px; }
+  .j-class-hero-content  { padding: 0 24px 28px; }
+  .j-plans-section       { padding: 40px 16px 56px; flex-direction: column; align-items: center; }
+  .plan-selected .j-plans-card { max-width: 100%; align-items: center; }
+  /* Right panel stacks below on tablet */
+  .plan-selected .j-plan-detail-panel { max-width: 100%; flex: none; width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .j-navbar          { padding: 0 16px; }
+  .j-logo-main       { font-size: 1.1rem; }
+  .j-class-hero      { height: 220px; }
+  .j-class-hero-content { padding: 0 16px 20px; }
+  .j-class-name      { font-size: 1.5rem; }
+  .j-plans-section   { padding: 32px 12px 48px; }
+  .plan-card         { flex: 1 1 100%; max-width: 100%; }
+}

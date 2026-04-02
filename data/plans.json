@@ -1,26 +1,50 @@
 [
-{
-"id": "trial",
-"name": "Free Trial",
-"price": "₹0",
-"duration": "1 Session",
-"frequency": "One-time",
-"description": "Try a single session before enrolling"
-},
-{
-"id": "monthly",
-"name": "Monthly Plan",
-"price": "₹999",
-"duration": "1 Month",
-"frequency": "Daily Classes",
-"description": "Unlimited access to all classes"
-},
-{
-"id": "advanced",
-"name": "Advanced Yoga",
-"price": "₹1999",
-"duration": "1 Month",
-"frequency": "Personal Coaching",
-"description": "Personalized sessions with guidance"
-}
+  {
+    "id": "trial",
+    "name": "Free Trial",
+    "price": "₹0",
+    "duration": "1 Session",
+    "frequency": "One-time",
+    "description": "Try a single session before enrolling",
+    "ideal_for": "Anyone curious about yoga who wants to experience the practice before committing to a plan",
+    "what_to_expect": [
+      "A 60-minute guided session with the instructor",
+      "Introduction to breath work and foundational postures",
+      "Personalised feedback at the end of the session",
+      "Guidance on which ongoing class best suits you"
+    ],
+    "includes": ["1 group class", "Instructor feedback", "Class recommendation"]
+  },
+  {
+    "id": "monthly",
+    "name": "Monthly Plan",
+    "price": "₹999",
+    "duration": "1 Month",
+    "frequency": "Daily Classes",
+    "description": "Unlimited access to all classes",
+    "ideal_for": "Students ready to build a consistent daily practice across all formats and levels",
+    "what_to_expect": [
+      "Unlimited access to all group classes every day",
+      "Weekly progress check-ins with the instructor",
+      "Access to our private student community",
+      "Flexible scheduling — attend any time slot that works for you"
+    ],
+    "includes": ["All class formats", "Community access", "Weekly check-ins", "Flexible scheduling"]
+  },
+  {
+    "id": "advanced",
+    "name": "Advanced Yoga",
+    "price": "₹1999",
+    "duration": "1 Month",
+    "frequency": "Personal Coaching",
+    "description": "Personalized sessions with guidance",
+    "ideal_for": "Dedicated practitioners seeking deep, personalised guidance and accelerated growth",
+    "what_to_expect": [
+      "One-on-one sessions tailored to your specific goals and body",
+      "Customised asana sequences and pranayama routines",
+      "Access to all group classes in addition to personal sessions",
+      "Detailed progress tracking and monthly practice review"
+    ],
+    "includes": ["Personal coaching", "Custom practice plan", "All group classes", "Progress tracking"]
+  }
 ]
