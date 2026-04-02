@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "background": "assets/images/Rishikesh-Hero.jpg"
+  },
+  "about": {
+    "below_image": "assets/images/About Us Below.jpg"
+  },
+  "why_join": {
+    "L1": "assets/images/L1.jpg",
+    "L2": "assets/images/L2.jpg",
+    "L3": "assets/images/L3.jpg",
+    "L4": "assets/images/L4.jpg",
+    "R1": "assets/images/R1.jpg"
+  },
+  "instructor": {
+    "photo":    "assets/images/Instructor.jpeg",
+    "action":   "assets/images/Namastey Instructor.jpg"
+  },
+  "classes": {
+    "power_yoga":    "assets/images/Power Yoga.jpg",
+    "morning_yoga":  "assets/images/Morning Yoga.jpg",
+    "beginner_yoga": "assets/images/Beginner Yoga.jpg",
+    "kids_yoga":     "assets/images/Kids Yoga.jpg",
+    "hatha_yoga":    "assets/images/Hatha Yoga.jpg"
+  },
+  "contact": {
+    "wa_icon": "assets/icons/whatsapp.svg",
+    "ig_icon": "assets/icons/instagram.svg"
+  },
+  "gallery": {
+    "studio":    "assets/images/Studio Yoga.jpg",
+    "kasuali":   "assets/images/Kasuali.jpg",
+    "rishikesh": "assets/images/Rishikesh-moments.jpg",
+    "moments_bg":"assets/images/Moments Background.jpg"
+  }
+}

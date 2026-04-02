@@ -1,0 +1,129 @@
+{
+  "navbar": {
+    "logo": "ETERNAL YOG",
+    "links": [
+      { "label": "Contact Us", "href": "#contact" },
+      { "label": "About",      "href": "#about"   },
+      { "label": "BLOG",       "href": "html/blog.html"},
+      { "label": "Join Now",   "href": "html/join.html"}
+    ]
+  },
+  "hero": {
+    "label":     "WELCOME TO THE JOURNEY",
+    "title":     "ETERNAL YOG",
+    "subtitle":  "Journey towards return to your true self through YOGSADHNA",
+    "cta_label": "LEARN MORE",
+    "cta_href":  "#path-of-practice"
+  },
+  "about": {
+    "badge_title": "WELCOME TO THE JOURNEY",
+    "badge_sub":   "Rooted in tradition, designed for inner balance",
+    "heading":     "ABOUT US",
+    "text":        "Eternal Yog is a space where ancient wisdom meets modern living. Founded with a deep reverence for the authentic traditions of yogsadhna, we guide seekers on a journey inward — toward stillness, clarity, and the remembrance of who they truly are.\n\nOur practice is rooted in the classical teachings of Hatha, Raja, and Bhakti yoga, woven with the timeless knowledge of Ayurveda and Sanskrit philosophy. Whether you are taking your first step or deepening an existing practice, Eternal Yog meets you exactly where you are."
+  },
+  "why_join": {
+    "heading":  "WHY JOIN US",
+    "subtitle": "This is not the class you attend...It's the space you return to- for balance, clarity and stillness"
+  },
+  "gallery": {
+    "badge_heading":   "Glimpse Into The Practice",
+    "badge_sanskrit":  "स्थिर सुखम आसनम",
+    "badge_roman":     "(Sthira Sukham Asanam)"
+  },
+  "classes": {
+    "badge_heading": "Path of Practice",
+    "items": [
+      {
+        "key":       "power_yoga",
+        "name":      "Power Yoga",
+        "timings":   "Mon · Wed · Fri — 6:30 AM",
+        "fees":      "₹2,500 / month",
+        "cta_label": "Join Now",
+        "cta_href":  "html/join.html"
+      },
+      {
+        "key":       "morning_yoga",
+        "name":      "Morning Yoga",
+        "timings":   "Daily — 7:00 AM",
+        "fees":      "₹2,000 / month",
+        "cta_label": "Join Now",
+        "cta_href":  "html/join.html"
+      },
+      {
+        "key":       "beginner_yoga",
+        "name":      "Beginner Yoga",
+        "timings":   "Tue · Thu · Sat — 8:00 AM",
+        "fees":      "₹1,800 / month",
+        "cta_label": "Join Now",
+        "cta_href":  "html/join.html"
+      },
+      {
+        "key":       "kids_yoga",
+        "name":      "Kids Yoga",
+        "timings":   "Sat · Sun — 9:00 AM",
+        "fees":      "₹1,500 / month",
+        "cta_label": "Join Now",
+        "cta_href":  "html/join.html"
+      },
+      {
+        "key":       "hatha_yoga",
+        "name":      "Hatha Yoga",
+        "timings":   "Mon · Wed · Fri — 5:30 AM",
+        "fees":      "₹2,200 / month",
+        "cta_label": "Join Now",
+        "cta_href":  "html/join.html"
+      }
+    ]
+  },
+  "testimonials": {
+    "badge_heading": "Reflections",
+    "items": [
+      {
+        "quote": "Practicing with Eternal Yog has transformed not just my body but my entire way of being. The guidance is gentle yet deeply profound.",
+        "name": "Priya Sharma",
+        "since": "Student since 2021"
+      },
+      {
+        "quote": "I came looking for a yoga class and found a sanctuary. Every session leaves me calmer, clearer, and more connected to myself.",
+        "name": "Rohan Mehta",
+        "since": "Student since 2022"
+      },
+      {
+        "quote": "The philosophy woven into every class sets Eternal Yog apart. This is not exercise — it is a way of returning home to yourself.",
+        "name": "Ananya Bose",
+        "since": "Student since 2020"
+      },
+      {
+        "quote": "After years of searching, I finally found a practice that honours both the ancient wisdom and the modern seeker. Truly grateful.",
+        "name": "Vikram Singh",
+        "since": "Student since 2023"
+      }
+    ]
+  },
+  "contact": {
+    "text": {
+      "heading": "Begin Your Journey",
+      "body": "Ready to step onto the mat?\nReach out to learn about our classes, schedules, and how to join the Eternal Yog family."
+    },
+    "whatsapp": {
+      "label": "Book via WhatsApp",
+      "sub": "Chat with us to reserve your spot",
+      "cta": "Start Chat",
+      "number": "919220605069",
+      "message": "Hello! I'd like to know more about Eternal Yog classes."
+    },
+    "instagram": {
+      "label": "Follow Our Journey",
+      "sub": "Daily practice and community updates",
+      "cta": "Visit Profile",
+      "handle": "@khushh_yoga",
+      "url": "https://www.instagram.com/khushh_yoga"
+    }
+  },
+  "instructor": {
+    "badge_heading": "The journey with the guide",
+    "bio":           "Every practice is a conversation between the body, the breath, and the self. As your guide, I do not teach yoga — I walk alongside you as you remember it.\n\nTrained in the classical lineages of Hatha and Raja yoga at the foothills of the Himalayas, I have spent years studying not just the postures, but the philosophy, the silence, and the rhythm that underlies all authentic practice.\n\nWhat I offer is not a curriculum — it is a living transmission. Each session is shaped by where you are, not where you think you should be.",
+    "quote_line1":   "Yoga is not just practiced on the mat...",
+    "quote_line2":   "It is a way of life we carry beyond it."
+  }
+}

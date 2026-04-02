@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#f09433"/>
+      <stop offset="25%"  stop-color="#e6683c"/>
+      <stop offset="50%"  stop-color="#dc2743"/>
+      <stop offset="75%"  stop-color="#cc2366"/>
+      <stop offset="100%" stop-color="#bc1888"/>
+    </linearGradient>
+  </defs>
+  <!-- Gradient rounded background -->
+  <rect width="60" height="60" rx="14" fill="url(#ig)"/>
+  <!-- Camera body outline -->
+  <rect x="11" y="11" width="38" height="38" rx="9" fill="none" stroke="white" stroke-width="3"/>
+  <!-- Lens circle -->
+  <circle cx="30" cy="30" r="9.5" fill="none" stroke="white" stroke-width="3"/>
+  <!-- Viewfinder dot top-right -->
+  <circle cx="43" cy="17" r="3" fill="white"/>
+</svg>

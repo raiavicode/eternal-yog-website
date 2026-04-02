@@ -1,159 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
 <title>Eternal Yog</title>
-
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;500&family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 
 </head>
-
 <body>
 
 <!-- NAVBAR -->
-
 <nav class="navbar">
-<div class="logo">ETERNAL YOG</div>
-
-<div class="navlinks">
-<a href="#about">About</a>
-<a href="#classes">Classes</a>
-<a href="blog.html">Blogs</a>
-</div>
+  <div class="logo">
+    <span class="logo-main">ETERNAL YOG</span>
+    <span class="logo-sub">*शाश्वत्*</span>
+  </div>
+  <div class="navlinks" id="nav-links">
+    <a href="#contact">Contact Us</a>
+    <a href="#about">About</a>
+    <a href="html/blog.html">BLOG</a>
+    <a href="html/join.html" class="nav-join">Join Now</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-
-<header class="hero">
-<img src="assets/images/Home.png" class="hero-img">
-</header>
-
-<!-- BENEFITS -->
-
-<section>
-<h2>Why Practice Yoga</h2>
-
-<div id="benefits-container" class="grid">
-
-<div class="card">
-<h3>Stress Relief</h3>
-<p>Reduces anxiety and promotes relaxation.</p>
+<div class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-label" id="hero-label">WELCOME TO THE JOURNEY</p>
+      <h1 class="hero-title" id="hero-title">ETERNAL YOG</h1>
+      <p class="hero-subtitle" id="hero-subtitle">Journey towards return to your true self through YOGSADHNA</p>
+    </div>
+    <a href="#path-of-practice" class="hero-btn" id="hero-cta">LEARN MORE</a>
+  </div>
+  
 </div>
-
-<div class="card">
-<h3>Flexibility</h3>
-<p>Improves mobility and posture.</p>
-</div>
-
-<div class="card">
-<h3>Strength</h3>
-<p>Builds core strength and stability.</p>
-</div>
-
-</div>
-
-</section>
 
 <!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-badge">
+    <p class="about-badge-title" id="about-badge-title">WELCOME TO THE JOURNEY</p>
+    <p class="about-badge-sub"   id="about-badge-sub">Rooted in tradition, designed for inner balance</p>
+  </div>
+  <div class="about-box">
+    <h2 class="about-heading" id="about-heading">ABOUT US</h2>
+    <p  class="about-text"    id="about-text">Eternal Yog is a space where ancient wisdom meets modern living. Founded with a deep reverence for the authentic traditions of yogsadhna, we guide seekers on a journey inward — toward stillness, clarity, and the remembrance of who they truly are.
 
-<section id="about">
-
-<h2>Meet Your Instructor</h2>
-
-<img src="assets/images/Instructor.jpg" class="instructor">
-
-<p>
-Khushboo leads Eternal Yog with a passion for helping students improve strength,
-flexibility and inner balance.
-</p>
-
+Our practice is rooted in the classical teachings of Hatha, Raja, and Bhakti yoga, woven with the timeless knowledge of Ayurveda and Sanskrit philosophy. Whether you are taking your first step or deepening an existing practice, Eternal Yog meets you exactly where you are.</p>
+  </div>
+  <div class="about-image-wrap">
+    <img class="about-image" id="about-image" src="assets/images/About Us Below.jpg" alt="About Us">
+  </div>
 </section>
 
-<!-- CLASSES -->
-
-<section id="classes">
-
-<h2>Our Classes</h2>
-
-<div id="classes-container" class="grid">
-
-<div class="classcard">
-<h3>Power Yoga</h3>
-<p>High energy strength building yoga</p>
-</div>
-
-<div class="classcard">
-<h3>Beginner Yoga</h3>
-<p>Perfect for starting your journey</p>
-</div>
-
-<div class="classcard">
-<h3>Meditation</h3>
-<p>Calm your mind and improve focus</p>
-</div>
-
-</div>
-
+<!-- WHY JOIN US -->
+<section class="why-join" id="why-join">
+  <div class="wj-badge">
+    <h2 class="wj-heading" id="wj-heading">WHY JOIN US</h2>
+    <p  class="wj-sub"     id="wj-sub">This is not the class you attend...It's the space you return to- for balance, clarity and stillness</p>
+  </div>
+  <div class="wj-grid-wrap">
+    <div class="wj-grid">
+      <img id="wj-l1" class="wj-landscape" src="assets/images/L1.jpg" alt="">
+      <img id="wj-l2" class="wj-landscape" src="assets/images/L2.jpg" alt="">
+      <img id="wj-l3" class="wj-landscape" src="assets/images/L3.jpg" alt="">
+      <img id="wj-l4" class="wj-landscape" src="assets/images/L4.jpg" alt="">
+      <img id="wj-r1" class="wj-portrait-img" src="assets/images/R1.jpg" alt="">
+    </div>
+  </div>
 </section>
 
-<!-- TESTIMONIAL -->
+<!-- INSTRUCTOR -->
+<section class="instructor" id="instructor">
+  <div class="instructor-badge">
+    <h2 class="instructor-heading" id="instructor-heading">The journey with the guide</h2>
+  </div>
+  <div class="instructor-content">
+    <div class="instructor-text">
+      <p id="instructor-bio">Every practice is a conversation between the body, the breath, and the self. As your guide, I do not teach yoga — I walk alongside you as you remember it.
 
-<section class="testimonial">
+Trained in the classical lineages of Hatha and Raja yoga at the foothills of the Himalayas, I have spent years studying not just the postures, but the philosophy, the silence, and the rhythm that underlies all authentic practice.
 
-<h2>Student Experience</h2>
+What I offer is not a curriculum — it is a living transmission. Each session is shaped by where you are, not where you think you should be.</p>
+    </div>
+    <div class="instructor-images">
+      <div class="instructor-img-main-wrap">
+        <img class="instructor-img-main" id="instructor-photo" src="assets/images/Yoga Institute.jpg" alt="Instructor">
+        <div class="instructor-quote">
+          <span class="instructor-quote-l1" id="instructor-quote-line1">Yoga is not just practiced on the mat...</span>
+          <span class="instructor-quote-l2" id="instructor-quote-line2">It is a way of life we carry beyond it.</span>
+        </div>
+      </div>
+      <div class="instructor-img-action-wrap">
+        <img class="instructor-img-action" id="instructor-action" src="assets/images/Kasuali.jpg" alt="Instructor in nature">
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="carousel">
-
-<button class="carousel-btn prev">&#10094;</button>
-
-<div class="carousel-viewport">
-<div class="carousel-track" id="testimonial-track"></div>
-</div>
-
-<button class="carousel-btn next">&#10095;</button>
-
-</div>
-
+<!-- PATH OF PRACTICE -->
+<section class="classes" id="path-of-practice">
+  <div class="classes-badge">
+    <h2 class="classes-heading" id="classes-heading">Path of Practice</h2>
+  </div>
+  <div class="classes-carousel-outer">
+    <button class="carousel-btn" id="classes-prev">&#8249;</button>
+    <div class="classes-carousel" id="classes-carousel">
+      <!-- cards injected by content.js -->
+    </div>
+    <button class="carousel-btn" id="classes-next">&#8250;</button>
+  </div>
 </section>
 
 <!-- GALLERY -->
-
-<section>
-
-<h2>Yoga Moments</h2>
-
-<div class="gallery">
-<img src="assets/images/Gallery1.jpeg">
-<img src="assets/images/Gallery2.jpeg">
-<img src="assets/images/Gallery3.jpeg">
-</div>
-
+<section class="gallery" id="gallery">
+  <div class="gallery-badge">
+    <h2 class="gallery-heading"     id="gallery-heading">Glimpse Into The Practice</h2>
+    <p  class="gallery-sanskrit"    id="gallery-sanskrit">स्थिर सुखम आसनम</p>
+    <p  class="gallery-translation" id="gallery-translation">(Sthira Sukham Asanam)</p>
+  </div>
+  <div class="gallery-grid" id="gallery-grid">
+    <!-- images injected by content.js -->
+  </div>
 </section>
 
-<!-- INSTAGRAM -->
-
-<section>
-
-<h2>Follow Our Yoga Journey</h2>
-
-<p>Daily yoga inspiration and practice tips</p>
-
-<a href="https://instagram.com/khushh_yoga" target="_blank">
-Instagram →
-</a>
-
+<!-- TESTIMONIALS & CONTACT -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-badge">
+    <h2 class="testimonials-heading" id="testimonials-heading">Reflections</h2>
+  </div>
+  <div class="testimonials-carousel-outer">
+    <button class="carousel-btn" id="testimonials-prev">&#8249;</button>
+    <div class="testimonials-carousel" id="testimonials-carousel">
+      <!-- cards injected by content.js -->
+    </div>
+    <button class="carousel-btn" id="testimonials-next">&#8250;</button>
+  </div>
+  <div class="contact-boxes" id="contact">
+    <div class="contact-box contact-box--text" id="contact-text-box"></div>
+    <a class="contact-box contact-box--wa" id="contact-wa-box" href="#" target="_blank" rel="noopener noreferrer"></a>
+    <a class="contact-box contact-box--ig" id="contact-ig-box" href="#" target="_blank" rel="noopener noreferrer"></a>
+  </div>
 </section>
 
-<footer>
-<p>© Eternal Yog by Khushboo</p>
-</footer>
-
-<script src="benefits.js"></script>
-<script src="classes.js"></script>
-<script src="testimonials.js"></script>
+<script src="js/content.js"></script>
 </body>
 </html>
