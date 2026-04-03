@@ -1,26 +1,227 @@
-[
 {
-"id": "trial",
-"name": "Free Trial",
-"price": "₹0",
-"duration": "1 Session",
-"frequency": "One-time",
-"description": "Try a single session before enrolling"
-},
-{
-"id": "monthly",
-"name": "Monthly Plan",
-"price": "₹999",
-"duration": "1 Month",
-"frequency": "Daily Classes",
-"description": "Unlimited access to all classes"
-},
-{
-"id": "advanced",
-"name": "Advanced Yoga",
-"price": "₹1999",
-"duration": "1 Month",
-"frequency": "Personal Coaching",
-"description": "Personalized sessions with guidance"
+  "power_yoga": [
+    {
+      "id": "trial",
+      "name": "Free Trial",
+      "price": "₹0",
+      "duration": "1 Session",
+      "frequency": "One-time",
+      "description": "Experience a full Power Yoga session before committing",
+      "ideal_for": "An energising practice to build strength, enhance endurance, and support healthy weight management.",
+      "what_to_expect": [
+        "A 50-minute guided high-energy yoga flow",
+        "Strength-building sequences with dynamic movements",
+        "Focus on balance, stability, and core engagement",
+        "Breath coordination to enhance endurance and support weight management"
+      ],
+      "includes": ["Guided session", "⁠Instructor support", "Post-practice relaxation"]
+    },
+    {
+      "id": "monthly",
+      "name": "Monthly Plan",
+      "price": "₹2,500",
+      "duration": "1 Month",
+      "frequency": "Mon - Fri",
+      "description": "5 sessions per week of dynamic Power Yoga",
+      "ideal_for": "An energising practice to build strength, enhance endurance, and support healthy weight management.",
+      "what_to_expect": [
+        "A 50-minute guided high-energy yoga flow",
+        "Strength-building sequences with dynamic movements",
+        "Focus on balance, stability, and core engagement",
+        "Breath coordination to enhance endurance and support weight management"
+      ],
+      "includes": ["Guided session", "⁠Instructor support", "Post-practice relaxation"]
+    }
+  ],
+
+  "morning_yoga": [
+    {
+      "id": "trial",
+      "name": "Free Trial",
+      "price": "₹0",
+      "duration": "1 Session",
+      "frequency": "One-time",
+      "description": "Start your morning with a single guided yoga session",
+      "ideal_for": "A mindful start to the day, blending yoga practice, pranayama, and wisdom to cultivate it as a way of life.",
+      "what_to_expect": [
+        "A 45-minute guided session to gently awaken the body",
+        "Simple asanas combined with breath awareness and pranayama",
+        "Introduction to yogic concepts for daily life",
+        "A calm and balanced flow to set the tone for the day"
+      ],
+      "includes": ["Guided session", "Pranayama practice", "Yogic wisdom & insights","Relaxation & grounding"]
+    },
+    {
+      "id": "monthly",
+      "name": "Monthly Plan",
+      "price": "₹2,500",
+      "duration": "1 Month",
+      "frequency": "Mon - Fri",
+      "description": "Daily morning yoga to energise your every day",
+      "ideal_for": "A mindful start to the day, blending yoga practice, pranayama, and wisdom to cultivate it as a way of life.",
+      "what_to_expect": [
+        "A 45-minute guided session to gently awaken the body",
+        "Simple asanas combined with breath awareness and pranayama",
+        "Introduction to yogic concepts for daily life",
+        "A calm and balanced flow to set the tone for the day"
+      ],
+      "includes": ["Guided session", "Pranayama practice", "Yogic wisdom & insights","Relaxation & grounding"]
+    }
+  ],
+
+  "beginner_yoga": [
+    {
+      "id": "trial",
+      "name": "Free Trial",
+      "price": "₹0",
+      "duration": "1 Session",
+      "frequency": "One-time",
+      "description": "Try your very first yoga class in a safe, welcoming environment",
+      "ideal_for": "Complete beginners stepping onto the mat for the very first time",
+      "what_to_expect": [
+        "A beginner-friendly 60-minute introductory session",
+        "Foundational postures explained step by step",
+        "Breath awareness and basic alignment principles",
+        "A warm, non-judgemental space to ask any questions"
+      ],
+      "includes": ["1 beginner class", "Posture guidance", "Q&A with instructor"]
+    },
+    {
+      "id": "monthly",
+      "name": "Monthly Plan",
+      "price": "₹2,500",
+      "duration": "1 Month",
+      "frequency": "Mon - Fri",
+      "description": "Structured beginner programme — 5 sessions per week",
+      "ideal_for": "New students who want a structured, supportive start to their yoga journey",
+      "what_to_expect": [
+        "12 beginner sessions building progressively each week",
+        "Focus on alignment, flexibility and body awareness",
+        "Modifications offered for every posture",
+        "Fortnightly progress review with the instructor"
+      ],
+      "includes": ["12 sessions/month", "Alignment focus", "Modifications", "Progress review"]
+    }
+  ],
+
+  "kids_yoga": [
+    {
+      "id": "trial",
+      "name": "Free Trial",
+      "price": "₹0",
+      "duration": "1 Session",
+      "frequency": "One-time",
+      "description": "Let your child experience yoga in a fun, playful setting",
+      "ideal_for": "A fun and mindful practice designed to support focus, flexibility, and overall well-being in children.",
+      "what_to_expect": [
+        "A 45-minute engaging session with playful yoga movements",
+        "Simple asanas to improve flexibility and body awareness",
+        "Breathing practices to enhance focus and calmness",
+        "Gentle movement to support healthy activity levels and address lifestyle concerns like low activity and childhood obesity"
+      ],
+      "includes": ["Guided session", "Fun & interactive activities", "Basic breath awareness","Relaxation & calming techniques"]
+    },
+    {
+      "id": "monthly",
+      "name": "Monthly Plan",
+      "price": "₹2,100",
+      "duration": "1 Month",
+      "frequency": "Mon - Fri",
+      "description": " kids yoga — Weekday Evening Sessions",
+      "ideal_for": "A fun and mindful practice designed to support focus, flexibility, and overall well-being in children.",
+      "what_to_expect": [
+        "A 45-minute engaging session with playful yoga movements",
+        "Simple asanas to improve flexibility and body awareness",
+        "Breathing practices to enhance focus and calmness",
+        "Gentle movement to support healthy activity levels and address lifestyle concerns like low activity and childhood obesity"
+      ],
+      "includes": ["Guided session", "Fun & interactive activities", "Basic breath awareness","Relaxation & calming techniques"]
+    }
+  ],
+
+  "hatha_yoga": [
+    {
+      "id": "trial",
+      "name": "Free Trial",
+      "price": "₹0",
+      "duration": "1 Session",
+      "frequency": "One-time",
+      "description": "Experience classical Hatha Yoga in its authentic form",
+      "ideal_for": "Anyone drawn to the traditional roots of yoga and its deeper philosophy",
+      "what_to_expect": [
+        "A 60-minute classical Hatha Yoga session",
+        "Introduction to the eight limbs of yoga",
+        "Slow, deliberate asana practice with breath awareness",
+        "A taste of how traditional practice differs from modern styles"
+      ],
+      "includes": ["1 Hatha class", "Philosophy introduction", "Instructor guidance"]
+    },
+    {
+      "id": "monthly",
+      "name": "Monthly Plan",
+      "price": "₹2,500",
+      "duration": "1 Month",
+      "frequency": "Mon - Fri",
+      "description": "Classical Hatha practice 5 times a week",
+      "ideal_for": "Students seeking depth, stillness and a grounded traditional practice",
+      "what_to_expect": [
+        "12 classical Hatha sessions per month",
+        "Systematic exploration of asana and pranayama",
+        "Incorporation of yoga philosophy and Sanskrit terminology",
+        "Weekly discussion on classical texts and teachings"
+      ],
+      "includes": ["12 sessions/month", "Pranayama", "Philosophy sessions", "Sanskrit study"]
+    }
+  ],
+
+  "default": [
+    {
+      "id": "trial",
+      "name": "Free Trial",
+      "price": "₹0",
+      "duration": "1 Session",
+      "frequency": "One-time",
+      "description": "Try a single session before enrolling",
+      "ideal_for": "Anyone curious about yoga who wants to experience the practice before committing to a plan",
+      "what_to_expect": [
+        "A 60-minute guided session with the instructor",
+        "Introduction to breath work and foundational postures",
+        "Personalised feedback at the end of the session",
+        "Guidance on which ongoing class best suits you"
+      ],
+      "includes": ["1 group class", "Instructor feedback", "Class recommendation"]
+    },
+    {
+      "id": "monthly",
+      "name": "Monthly Plan",
+      "price": "₹999",
+      "duration": "1 Month",
+      "frequency": "Daily Classes",
+      "description": "Unlimited access to all classes",
+      "ideal_for": "Students ready to build a consistent daily practice across all formats and levels",
+      "what_to_expect": [
+        "Unlimited access to all group classes every day",
+        "Weekly progress check-ins with the instructor",
+        "Access to our private student community",
+        "Flexible scheduling — attend any time slot that works for you"
+      ],
+      "includes": ["All class formats", "Community access", "Weekly check-ins", "Flexible scheduling"]
+    },
+    {
+      "id": "advanced",
+      "name": "Advanced Yoga",
+      "price": "₹1,999",
+      "duration": "1 Month",
+      "frequency": "Personal Coaching",
+      "description": "Personalized sessions with guidance",
+      "ideal_for": "Dedicated practitioners seeking deep, personalised guidance and accelerated growth",
+      "what_to_expect": [
+        "One-on-one sessions tailored to your specific goals and body",
+        "Customised asana sequences and pranayama routines",
+        "Access to all group classes in addition to personal sessions",
+        "Detailed progress tracking and monthly practice review"
+      ],
+      "includes": ["Personal coaching", "Custom practice plan", "All group classes", "Progress tracking"]
+    }
+  ]
 }
-]

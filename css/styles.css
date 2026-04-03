@@ -8,7 +8,7 @@
   --badge-bg:     #dbe3e8;   /* About badge box background */
   --about-box-bg: #f4dccb;   /* About Us dashed content box background */
   /* Navbar height – update this if navbar padding/font ever changes */
-  --navbar-h:     72px;      /* used to size hero height via calc() */
+  --navbar-h:     56px;      /* used to size hero height via calc() */
   /* Section 3 – Why Join Us (tweak any of these independently) */
   --wj-bg:           #e8ede0;   /* Why Join Us section background */
   --wj-badge-bg:     #c8d4bc;   /* Why Join Us badge box background */
@@ -73,7 +73,7 @@ body {
   display: flex;            /* row layout for logo + links */
   justify-content: space-between;   /* logo on left, links on right */
   align-items: center;      /* vertically centre logo and links */
-  padding: 14px 48px;       /* vertical breathing room; horizontal inset */
+  padding: 0 48px;        /* reduced vertical padding — navbar height ~56px */
   background: var(--sage);  /* warm tan navbar background */
   position: sticky;         /* sticks to top when scrolling */
   top: 0;                   /* stick position — flush to viewport top */
@@ -82,10 +82,17 @@ body {
 }
 
 .logo {
-  display: flex;            /* stack logo lines vertically */
-  flex-direction: column;   /* main name above Sanskrit subtitle */
-  align-items: flex-start;  /* left-align both lines */
-  gap: 3px;                 /* tight gap between the two text lines */
+  display: flex;
+  align-items: center;
+}
+
+.logo a { line-height: 0; }
+
+.logo-img {
+  height: 70px;               /* fits within navbar padding without expanding navbar height */
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;   /* white JPEG background blends into sage navbar */
 }
 
 .logo-main {

@@ -1,32 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Join Classes | Eternal Yog</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/styles.css">
+  <title>Join Classes | Eternal Yog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/join.css">
 </head>
-
 <body>
 
-<section class="checkout">
+  <!-- NAVBAR -->
+  <nav class="j-navbar">
+    <a href="../index.html"><img src="../assets/images/Logo.jpeg" alt="Eternal Yog" class="logo-img j-logo-img"></a>
+    <a class="j-back-link" href="../index.html">← Back to Home</a>
+  </nav>
 
-<div class="checkout-card">
+  <!-- CLASS PICKER — shown when no ?class= param; user picks a class here -->
+  <section class="j-class-picker" id="class-picker">
+    <div class="j-class-picker-inner">
+      <h2 class="j-picker-heading">Choose Your Practice</h2>
+      <p  class="j-picker-sub">Select a class below to explore plans and book your spot</p>
+      <div class="j-class-grid" id="class-grid">
+        <!-- populated by plans.js from content.json + assets.json -->
+      </div>
+    </div>
+  </section>
 
-<h2>Choose Your Plan</h2>
+  <!-- CLASS HERO — full image + name + timings + fees -->
+  <section class="j-class-hero" id="class-hero">
+    <img class="j-class-hero-img" id="class-hero-img" src="" alt="">
+    <div class="j-class-hero-overlay"></div>
+    <div class="j-class-hero-content">
+      <h1 class="j-class-name"  id="class-name"></h1>
+      <div class="j-class-meta">
+        <span class="j-class-timings" id="class-timings"></span>
+        <span class="j-class-fees"    id="class-fees"></span>
+      </div>
+    </div>
+  </section>
 
-<div id="plans-container" class="plans"></div>
+  <!-- PLAN SELECTION — splits into left + right on plan pick -->
+  <section class="j-plans-section" id="plans-section">
 
-<!-- PLAN DETAILS -->
-
-<div id="plan-details" class="plan-details hidden"></div>
-
-<button id="payBtn" class="cta hidden">Proceed to Pay</button>
-
-</div>
-
-</section>
-
-<script src="../js/plans.js"></script>
+    <!-- LEFT — plan cards + summary table + WhatsApp CTA -->
+    <div class="j-plans-card">
+      <h2 class="j-plans-heading">Choose Your Commitment</h2>
+      <div  id="plans-container" class="j-plans-grid"></div>
+      <div  id="plan-details"    class="j-plan-details hidden"></div>
+    </div>
+    <!-- RIGHT — slides in on plan selection, populated by plans.js -->
+    <div class="j-plan-detail-panel" id="plan-detail-panel"></div>
+  </section>
+  <button id="payBtn" class="j-pay-btn hidden">
+      <img src="../assets/icons/whatsapp.svg" alt="" class="j-pay-btn-icon">
+        Book via WhatsApp
+  </button>
+  
+  <script src="../js/plans.js"></script>
 
 </body>
 </html>
