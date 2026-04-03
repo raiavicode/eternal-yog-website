@@ -86,6 +86,8 @@ body {
   align-items: center;
 }
 
+.logo a { line-height: 0; }
+
 .logo-img {
   height: 70px;               /* fits within navbar padding without expanding navbar height */
   width: auto;

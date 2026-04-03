@@ -34,6 +34,8 @@ body {
   background: var(--j-bg);
   color: var(--j-text);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;   /* enables align-self: center on the button child */
 }
 
 /* ── NAVBAR ── */
@@ -50,6 +52,8 @@ body {
   background: var(--j-nav-bg);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
 }
+
+.j-navbar a:has(.j-logo-img) { line-height: 0; }
 
 .j-logo-img {
   height: 56px;   /* matches --j-navbar-h exactly */
@@ -140,7 +144,7 @@ body {
 
 /* ── PLAN SELECTION ── */
 .j-plans-section {
-  padding: 56px 5% 72px;
+  padding: 56px 2% 72px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -156,7 +160,7 @@ body {
 
 .j-plans-card {
   width: 100%;
-  max-width: 860px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,7 +170,7 @@ body {
 }
 
 .plan-selected .j-plans-card {
-  max-width: 460px;
+  max-width: 640px;
   align-items: flex-start;   /* left-align contents when in split view */
 }
 
@@ -182,7 +186,7 @@ body {
 /* Plan cards grid — always single row, cards share width equally */
 .j-plans-grid {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: nowrap;      /* never break to next line */
   width: 100%;
 }
@@ -190,10 +194,12 @@ body {
 .plan-card {
   flex: 1 1 0;      /* equal share of available width — never uses a min-width basis */
   min-width: 0;     /* allows shrinking below content width without wrapping */
+  width: 100%;
+  max-width: 900px;
   background: var(--j-card-bg);
   border: 2px solid var(--j-card-border);
-  border-radius: 16px;
-  padding: 40px 32px;
+  border-radius: 25px;
+  padding: 52px 48px;
   cursor: pointer;
   text-align: center;
   transition: border-color 0.2s, background 0.2s, transform 0.15s;
@@ -212,6 +218,8 @@ body {
   border-color: var(--j-card-active-bg);
   color: var(--j-card-active-text);
   transform: translateY(-3px);
+  flex-grow: 2;               /* active card takes twice the width of inactive cards */
+  transition: flex-grow 0.3s ease, border-color 0.2s, background 0.2s, transform 0.15s;
 }
 
 .plan-card h3 {
@@ -274,13 +282,16 @@ body {
   white-space: nowrap;
 }
 
-/* WhatsApp booking button */
+/* WhatsApp booking button — sits outside section in HTML, centred via align-self on flex-column body */
 .j-pay-btn {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;   /* icon stacks above text */
   align-items: center;
-  gap: 5px;
-  padding: 5px 15px;
+  align-self: center;       /* centres horizontally inside body flex column */
+  margin: 24px 0 48px;
+  width: fit-content;
+  gap: 1px;
+  padding: 5px 5px;
   background: var(--j-wa-green);
   color: #fff;
   font-family: 'Cinzel', serif;
@@ -289,7 +300,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: filter 0.2s;
 }
@@ -316,7 +327,7 @@ body {
 
 .plan-selected .j-plan-detail-panel {
   flex: 1;
-  max-width: 520px;
+  max-width: 720px;
   overflow: visible;
   opacity: 1;
 }
@@ -397,23 +408,205 @@ body {
   white-space: nowrap;
 }
 
+/* ── CLASS PICKER ── */
+.j-class-picker {
+  padding: 64px 48px 72px;
+  display: flex;
+  justify-content: center;
+}
+
+.j-class-picker-inner {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.j-picker-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--j-deep-green);
+  text-align: center;
+}
+
+.j-picker-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--j-muted);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.j-class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.j-picker-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+  background: #dcd0c8;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.j-picker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.j-picker-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.j-picker-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.10) 55%, transparent 100%);
+}
+
+.j-picker-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 18px 18px;
+}
+
+.j-picker-card-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.j-picker-card-timings {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.02em;
+}
+
+/* ── CAROUSEL (mobile + tablet) ── */
+.j-carousel-wrap {
+  position: relative;
+  width: 100%;
+}
+
+/* Dot indicators */
+.j-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.j-carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--j-card-border);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.j-carousel-dot.active {
+  background: var(--j-deep-green);
+  transform: scale(1.3);
+}
+
 /* ── RESPONSIVE ── */
-@media (max-width: 768px) {
+
+/* iPad Pro (11" = 1024px, 12.9" = 1366px in landscape but 1024px portrait) */
+@media (max-width: 1024px) {
+  .j-class-picker       { padding: 48px 0 64px; }
+  .j-class-picker-inner { gap: 10px; }
+  .j-picker-heading     { padding: 0 32px; }
+  .j-picker-sub         { padding: 0 32px; }
+
+  .j-class-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 32px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 12px 32px 12px;
+    width: 100%;
+  }
+  .j-class-grid::-webkit-scrollbar { display: none; }
+
+  .j-picker-card {
+    flex: 0 0 36vw;   /* ~2.5 cards visible on iPad Pro */
+    max-width: 340px;
+    scroll-snap-align: start;
+    aspect-ratio: 3 / 4;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.14);
+  }
+}
+
+/* iPad Air (820px) and smaller tablets */
+@media (max-width: 820px) {
   .j-navbar              { padding: 0 24px; }
-  .j-class-hero          { height: 260px; }
-  .j-class-hero-content  { padding: 0 24px 28px; }
+  /* Hero: fixed height + overflow:hidden so overlay and plans section stay flush */
+  .j-class-hero          { height: 300px; overflow: hidden; }
+  .j-class-hero-img      { height: 100%; max-height: none; object-fit: cover; background-color: transparent; }
+  .j-class-hero-content  { padding: 0 24px 28px; max-width: 100%; }
   .j-plans-section       { padding: 40px 16px 56px; flex-direction: column; align-items: center; }
   .plan-selected .j-plans-card { max-width: 100%; align-items: center; }
-  /* Right panel stacks below on tablet */
   .plan-selected .j-plan-detail-panel { max-width: 100%; flex: none; width: 100%; }
+  .j-class-picker        { padding: 40px 0 56px; }
+  .j-class-picker-inner  { gap: 8px; }
+  .j-picker-heading      { padding: 0 24px; }
+  .j-picker-sub          { padding: 0 24px; }
+
+  .j-class-grid {
+    gap: 16px;
+    scroll-padding-left: 24px;
+    padding: 12px 24px 12px;
+  }
+  .j-picker-card { flex: 0 0 44vw; max-width: 300px; }  /* ~2 cards visible on iPad Air */
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+  .j-picker-card { flex: 0 0 62vw; max-width: 280px; }  /* ~1.6 cards visible */
 }
 
 @media (max-width: 480px) {
   .j-navbar          { padding: 0 16px; }
   .j-logo-main       { font-size: 1.1rem; }
-  .j-class-hero      { height: 220px; }
+  .j-class-hero      { height: 240px; }
   .j-class-hero-content { padding: 0 16px 20px; }
   .j-class-name      { font-size: 1.5rem; }
   .j-plans-section   { padding: 32px 12px 48px; }
   .plan-card         { flex: 1 1 100%; max-width: 100%; }
+  .j-class-picker    { padding: 28px 0 40px; }
+  .j-picker-heading  { padding: 0 16px; }
+  .j-picker-sub      { padding: 0 16px; }
+
+  .j-class-grid {
+    gap: 12px;
+    padding: 12px 16px 12px;
+    scroll-padding-left: 16px;
+  }
+  .j-picker-card { flex: 0 0 72vw; max-width: none; }
 }

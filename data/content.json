@@ -36,7 +36,7 @@
       {
         "key":       "power_yoga",
         "name":      "Power Yoga",
-        "timings":   "Mon · Wed · Fri — 6:30 AM",
+        "timings":   "Mon - Fri — 9:00 AM",
         "fees":      "₹2,500 / month",
         "cta_label": "Join Now",
         "cta_href":  "html/join.html"
@@ -44,32 +44,32 @@
       {
         "key":       "morning_yoga",
         "name":      "Morning Yoga",
-        "timings":   "Daily — 7:00 AM",
-        "fees":      "₹2,000 / month",
+        "timings":   "Mon - Fri — 6:00 AM",
+        "fees":      "₹2,500 / month",
         "cta_label": "Join Now",
         "cta_href":  "html/join.html"
       },
       {
         "key":       "beginner_yoga",
         "name":      "Beginner Yoga",
-        "timings":   "Tue · Thu · Sat — 8:00 AM",
-        "fees":      "₹1,800 / month",
+        "timings":   "Mon - Fri — 5:30 PM",
+        "fees":      "₹2,500 / month",
         "cta_label": "Join Now",
         "cta_href":  "html/join.html"
       },
       {
         "key":       "kids_yoga",
         "name":      "Kids Yoga",
-        "timings":   "Sat · Sun — 9:00 AM",
-        "fees":      "₹1,500 / month",
+        "timings":   "Mon - Fri — 6:30 PM",
+        "fees":      "₹2,100 / month",
         "cta_label": "Join Now",
         "cta_href":  "html/join.html"
       },
       {
         "key":       "hatha_yoga",
         "name":      "Hatha Yoga",
-        "timings":   "Mon · Wed · Fri — 5:30 AM",
-        "fees":      "₹2,200 / month",
+        "timings":   "Mon - Fri — 8:00 AM",
+        "fees":      "₹2,500 / month",
         "cta_label": "Join Now",
         "cta_href":  "html/join.html"
       }

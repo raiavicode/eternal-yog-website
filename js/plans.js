@@ -10,21 +10,109 @@
     fetch('../data/plans.json').then(function (r)   { return r.json(); })
   ]).then(function (results) {
 
-    var content = results[0];
-    var assets  = results[1];
-    var plans   = results[2];
+    var content   = results[0];
+    var assets    = results[1];
+    var plansData = results[2];
+
+    var classPicker   = document.getElementById('class-picker');
+    var classHero     = document.getElementById('class-hero');
+    var plansSection  = document.getElementById('plans-section');
+    var payBtn        = document.getElementById('payBtn');
+
+    /* ── NO CLASS PARAM — show class picker ── */
+    if (!classKey) {
+      classHero.style.display    = 'none';
+      plansSection.style.display = 'none';
+      payBtn.style.display       = 'none';
+
+      var classGrid = document.getElementById('class-grid');
+      if (classGrid && content.classes && content.classes.items) {
+        var items = content.classes.items;
+
+        /* Wrap grid in carousel container */
+        var wrap = document.createElement('div');
+        wrap.className = 'j-carousel-wrap';
+        classGrid.parentNode.insertBefore(wrap, classGrid);
+        wrap.appendChild(classGrid);
+
+        items.forEach(function (item) {
+          var imgSrc = (assets.classes && assets.classes[item.key])
+            ? '../' + assets.classes[item.key]
+            : '';
+
+          var card = document.createElement('div');
+          card.className = 'j-picker-card';
+          card.innerHTML =
+            '<img class="j-picker-card-img" src="' + imgSrc + '" alt="' + item.name + '">'
+            + '<div class="j-picker-card-overlay"></div>'
+            + '<div class="j-picker-card-info">'
+            +   '<p class="j-picker-card-name">'    + item.name    + '</p>'
+            +   '<p class="j-picker-card-timings">' + item.timings + '</p>'
+            + '</div>';
+
+          card.onclick = function () {
+            window.location.href = 'join.html?class=' + encodeURIComponent(item.key);
+          };
+
+          classGrid.appendChild(card);
+        });
+
+        /* Dot indicators — only rendered on mobile/tablet */
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+          var dotsEl = document.createElement('div');
+          dotsEl.className = 'j-carousel-dots';
+
+          var dots = items.map(function (_, i) {
+            var dot = document.createElement('button');
+            dot.className = 'j-carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            dot.onclick = function () {
+              var cards = classGrid.querySelectorAll('.j-picker-card');
+              if (cards[i]) {
+                classGrid.scrollTo({ left: cards[i].offsetLeft - 24, behavior: 'smooth' });
+              }
+            };
+            dotsEl.appendChild(dot);
+            return dot;
+          });
+
+          wrap.appendChild(dotsEl);
+
+          /* Update active dot on scroll */
+          classGrid.addEventListener('scroll', function () {
+            var cards = classGrid.querySelectorAll('.j-picker-card');
+            var scrollLeft = classGrid.scrollLeft;
+            var closest = 0;
+            var minDist = Infinity;
+            cards.forEach(function (card, i) {
+              var dist = Math.abs(card.offsetLeft - 24 - scrollLeft);
+              if (dist < minDist) { minDist = dist; closest = i; }
+            });
+            dots.forEach(function (d, i) {
+              d.classList.toggle('active', i === closest);
+            });
+          });
+        }
+      }
+      return;   /* nothing else to render */
+    }
+
+    /* ── CLASS PARAM PRESENT — hide picker, show hero + plans ── */
+    classPicker.style.display = 'none';
+
+    /* Pick the plan set for the selected class, fall back to default */
+    var plans = plansData[classKey] || plansData['default'] || [];
 
     /* ── CLASS HERO ── */
 
     /* Find matching class item from content.json */
     var classItem = null;
-    if (classKey && content.classes && content.classes.items) {
+    if (content.classes && content.classes.items) {
       classItem = content.classes.items.find(function (item) {
         return item.key === classKey;
       });
     }
 
-    var classHero    = document.getElementById('class-hero');
     var classNameEl  = document.getElementById('class-name');
     var classTimings = document.getElementById('class-timings');
     var classFeesEl  = document.getElementById('class-fees');
@@ -41,7 +129,6 @@
         heroImg.alt = classItem.name;
       }
     } else {
-      /* No class param — generic fallback */
       if (classNameEl) classNameEl.textContent = 'Join Eternal Yog';
     }
 
