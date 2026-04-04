@@ -16,7 +16,7 @@
   --j-card-active-bg:  #4e5b2c;   /* selected plan — dark green fill */
   --j-card-active-text:#fff;       /* selected plan — white text */
   --j-detail-bg:       #f0ece3;   /* plan detail table background */
-  --j-wa-green:        #25d366;   /* WhatsApp button green */
+  --j-wa-green:        #f6f3ec;   /* WhatsApp button green */
   --j-navbar-h:        56px;       /* matches navbar height on index.html and blog.html */
 }
 
@@ -114,37 +114,37 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #fff;
-  margin-bottom: 14px;
+  margin-bottom: 0.5px;
 }
 
 .j-class-meta {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
 }
 
 .j-class-timings {
   font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.65rem;
   color: rgba(255, 255, 255, 0.88);
   letter-spacing: 0.04em;
 }
 
 .j-class-fees {
   font-family: 'Cinzel', serif;
-  font-size: 1rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: #fff;
   background: var(--j-deep-green);
-  padding: 4px 14px;
+  padding: 3px 10px;
   border-radius: 4px;
   letter-spacing: 0.04em;
 }
 
 /* ── PLAN SELECTION ── */
 .j-plans-section {
-  padding: 56px 2% 72px;
+  padding: 56px 2% 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -186,7 +186,7 @@ body {
 /* Plan cards grid — always single row, cards share width equally */
 .j-plans-grid {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: nowrap;      /* never break to next line */
   width: 100%;
 }
@@ -293,7 +293,7 @@ body {
   gap: 1px;
   padding: 5px 5px;
   background: var(--j-wa-green);
-  color: #fff;
+  color: #4e5b2c;
   font-family: 'Cinzel', serif;
   font-size: 0.65rem;
   font-weight: 600;
@@ -570,7 +570,7 @@ body {
   .j-class-hero          { height: 300px; overflow: hidden; }
   .j-class-hero-img      { height: 100%; max-height: none; object-fit: cover; background-color: transparent; }
   .j-class-hero-content  { padding: 0 24px 28px; max-width: 100%; }
-  .j-plans-section       { padding: 40px 16px 56px; flex-direction: column; align-items: center; }
+  .j-plans-section       { padding: 40px 16px 30px; flex-direction: column; align-items: center; }
   .plan-selected .j-plans-card { max-width: 100%; align-items: center; }
   .plan-selected .j-plan-detail-panel { max-width: 100%; flex: none; width: 100%; }
   .j-class-picker        { padding: 40px 0 56px; }
@@ -597,11 +597,11 @@ body {
   .j-class-hero      { height: 240px; }
   .j-class-hero-content { padding: 0 16px 20px; }
   .j-class-name      { font-size: 1.5rem; }
-  .j-plans-section   { padding: 32px 12px 48px; }
+  .j-plans-section   { padding: 32px 12px 20px; }
   .plan-card         { flex: 1 1 100%; max-width: 100%; }
   .j-class-picker    { padding: 28px 0 40px; }
-  .j-picker-heading  { padding: 0 16px; }
-  .j-picker-sub      { padding: 0 16px; }
+  .j-picker-heading  { padding: 0 16px; font-size: 1.3rem; letter-spacing: 0.06em; }
+  .j-picker-sub      { padding: 0 16px; font-size: 0.82rem; }
 
   .j-class-grid {
     gap: 12px;
