@@ -1,0 +1,161 @@
+/* ── LEGAL PAGES — STANDALONE STYLES ── */
+/* Used exclusively by html/privacy-policy.html, html/terms.html, html/disclaimer.html.
+   No dependency on styles.css or join.css.
+   All variables, resets, and layout are self-contained. */
+
+/* ── VARIABLES ── */
+:root {
+  --l-bg:        #f6f3ec;   /* warm off-white */
+  --l-nav-bg:    #cbc3a8;   /* warm tan navbar */
+  --l-text:      #3a3028;   /* warm dark brown */
+  --l-muted:     #7a6a58;   /* secondary text */
+  --l-green:     #4e5b2c;   /* olive green accent */
+  --l-border:    #e0d8cc;   /* subtle warm border */
+  --l-navbar-h:  56px;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { overflow-x: hidden; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--l-bg);
+  color: var(--l-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── NAVBAR ── */
+.l-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: var(--l-navbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  background: var(--l-nav-bg);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.l-logo-img {
+  height: 56px;
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.l-navbar a:has(.l-logo-img) { line-height: 0; }
+
+.l-back-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #3b3b2f;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.l-back-link:hover { color: var(--l-green); }
+
+/* ── PAGE CONTENT ── */
+.l-content {
+  flex: 1;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 56px 32px 72px;
+}
+
+.l-page-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--l-green);
+  margin-bottom: 6px;
+}
+
+.l-last-updated {
+  font-size: 0.78rem;
+  color: var(--l-muted);
+  margin-bottom: 40px;
+}
+
+/* ── SECTIONS ── */
+.l-section {
+  margin-bottom: 32px;
+}
+
+.l-section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--l-green);
+  margin-bottom: 10px;
+}
+
+.l-section p {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--l-text);
+  margin-bottom: 10px;
+}
+
+.l-section p:last-child { margin-bottom: 0; }
+
+.l-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.l-section ul li {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--l-text);
+  padding-left: 20px;
+  position: relative;
+}
+
+.l-section ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--l-green);
+  font-weight: 500;
+}
+
+/* Divider between sections */
+.l-divider {
+  border: none;
+  border-top: 1px solid var(--l-border);
+  margin: 32px 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .l-navbar   { padding: 0 24px; }
+  .l-content  { padding: 40px 24px 56px; }
+  .l-page-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .l-navbar   { padding: 0 16px; }
+  .l-content  { padding: 32px 16px 48px; }
+  .l-page-title { font-size: 1.3rem; }
+}
