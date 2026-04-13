@@ -77,14 +77,14 @@
       "duration": "1 Session",
       "frequency": "One-time",
       "description": "Try your very first yoga class in a safe, welcoming environment",
-      "ideal_for": "Complete beginners stepping onto the mat for the very first time",
+      "ideal_for": "A gentle introduction to yoga, designed to build a strong and mindful foundation for your practice.",
       "what_to_expect": [
-        "A beginner-friendly 60-minute introductory session",
-        "Foundational postures explained step by step",
-        "Breath awareness and basic alignment principles",
-        "A warm, non-judgemental space to ask any questions"
+        "A 50-minute guided session with simple and easy-to-follow asanas",
+        "Focus on correct alignment and body awareness",
+        "Introduction to basic pranayama and breath coordination",
+        "A supportive pace to build confidence and comfort in practice"
       ],
-      "includes": ["1 beginner class", "Posture guidance", "Q&A with instructor"]
+      "includes": ["Guided session", "Step-by-step instructions", "Basic pranayama","Relaxation & grounding"]
     },
     {
       "id": "monthly",
@@ -93,14 +93,14 @@
       "duration": "1 Month",
       "frequency": "Mon - Fri",
       "description": "Structured beginner programme — 5 sessions per week",
-      "ideal_for": "New students who want a structured, supportive start to their yoga journey",
+      "ideal_for": "A gentle introduction to yoga, designed to build a strong and mindful foundation for your practice.",
       "what_to_expect": [
-        "12 beginner sessions building progressively each week",
-        "Focus on alignment, flexibility and body awareness",
-        "Modifications offered for every posture",
-        "Fortnightly progress review with the instructor"
+        "A 50-minute guided session with simple and easy-to-follow asanas",
+        "Focus on correct alignment and body awareness",
+        "Introduction to basic pranayama and breath coordination",
+        "A supportive pace to build confidence and comfort in practice"
       ],
-      "includes": ["12 sessions/month", "Alignment focus", "Modifications", "Progress review"]
+      "includes": ["Guided session", "Step-by-step instructions", "Basic pranayama","Relaxation & grounding"]
     }
   ],
 
@@ -147,14 +147,14 @@
       "duration": "1 Session",
       "frequency": "One-time",
       "description": "Experience classical Hatha Yoga in its authentic form",
-      "ideal_for": "Anyone drawn to the traditional roots of yoga and its deeper philosophy",
+      "ideal_for": "A classical practice that brings balance to body and mind through posture, breath, and stillness.",
       "what_to_expect": [
-        "A 60-minute classical Hatha Yoga session",
-        "Introduction to the eight limbs of yoga",
-        "Slow, deliberate asana practice with breath awareness",
-        "A taste of how traditional practice differs from modern styles"
+        "A 50-minute guided session rooted in traditional Hatha Yoga",
+        "Steady and mindful asanas with focus on alignment",
+        "Integration of pranayama for breath awareness and balance",
+        "A calm pace to cultivate stability, awareness, and inner stillness"
       ],
-      "includes": ["1 Hatha class", "Philosophy introduction", "Instructor guidance"]
+      "includes": ["Guided session", "Pranayama practice", "Alignment-focused approach","Relaxation & stillness"]
     },
     {
       "id": "monthly",
@@ -163,14 +163,14 @@
       "duration": "1 Month",
       "frequency": "Mon - Fri",
       "description": "Classical Hatha practice 5 times a week",
-      "ideal_for": "Students seeking depth, stillness and a grounded traditional practice",
+      "ideal_for": "A classical practice that brings balance to body and mind through posture, breath, and stillness.",
       "what_to_expect": [
-        "12 classical Hatha sessions per month",
-        "Systematic exploration of asana and pranayama",
-        "Incorporation of yoga philosophy and Sanskrit terminology",
-        "Weekly discussion on classical texts and teachings"
+        "A 50-minute guided session rooted in traditional Hatha Yoga",
+        "Steady and mindful asanas with focus on alignment",
+        "Integration of pranayama for breath awareness and balance",
+        "A calm pace to cultivate stability, awareness, and inner stillness"
       ],
-      "includes": ["12 sessions/month", "Pranayama", "Philosophy sessions", "Sanskrit study"]
+      "includes": ["Guided session", "Pranayama practice", "Alignment-focused approach","Relaxation & stillness"]
     }
   ],
 
