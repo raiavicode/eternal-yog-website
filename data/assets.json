@@ -28,9 +28,10 @@
     "ig_icon": "assets/icons/instagram.svg"
   },
   "gallery": {
-    "studio":    "assets/images/Studio Yoga.jpg",
-    "kasuali":   "assets/images/Kasuali.jpg",
-    "rishikesh": "assets/images/Rishikesh-moments.jpg",
-    "moments_bg":"assets/images/Moments Background.jpg"
+    "studio":       "assets/images/Studio Yoga.jpg",
+    "kasuali":      "assets/images/Kasuali.jpg",
+    "rishikesh":    "assets/images/Rishikesh-moments.jpg",
+    "kapotanasana": "assets/images/Kapotanasana.jpeg",
+    "moments_bg":   "assets/images/Moments Background.jpg"
   }
 }

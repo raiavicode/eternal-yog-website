@@ -9,10 +9,10 @@
     ]
   },
   "hero": {
-    "label":     "WELCOME TO THE JOURNEY",
+    "label":     "WELCOME TO ",
     "title":     "ETERNAL YOG",
-    "subtitle":  "Journey towards return to your true self through YOGSADHNA",
-    "cta_label": "LEARN MORE",
+    "subtitle":  "Journey towards your true self through YOGSADHNA",
+    "cta_label": "BEGIN PRACTICE",
     "cta_href":  "#path-of-practice"
   },
   "about": {

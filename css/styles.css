@@ -171,6 +171,8 @@ body {
   position: absolute;                      /* covers entire hero */
   inset: 0;                                /* top/right/bottom/left all 0 */
   background: rgba(0, 0, 0, 0.42);        /* 42% dark tint for text legibility */
+  backdrop-filter: blur(3px);             /* blurs the hero background image */
+  -webkit-backdrop-filter: blur(2px);     /* Safari support */
   z-index: 0;                              /* below hero content */
 }
 
@@ -220,14 +222,25 @@ body {
 .hero-subtitle {
   display: block;
   font-family: 'Inter', sans-serif;   /* lighter body font for contrast with title */
-  font-size: 0.65rem;                 /* small — supporting text, not focal */
+  font-size: 0.85rem;                 /* small — supporting text, not focal */
   letter-spacing: 0.18em;             /* wide tracking — elegant */
   font-style: italic;                 /* italic treatment */
   font-weight: 100;                   /* thin weight */
   opacity: 0.88;                      /* slightly muted */
   line-height: 1.8;                   /* open line height */
   text-transform: uppercase;          /* all caps */
-  margin-bottom: 50px;                /* space before CTA button */
+  margin-bottom: 25px;                /* space before CTA button */
+}
+
+.hero-sanskrit {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 1.5rem;              /* same as .hero-label */
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #fff;
+  opacity: 0.85;
+  margin-top: -6px;
+  margin-bottom: 30px;
 }
 
 .hero-btn {
@@ -588,26 +601,43 @@ body {
 }
 
 /* Scalable grid — add keys to assets.json and images appear automatically */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 500px));   /* fixed-width columns — controls image size */
-  justify-content: center;                              /* centres the 3-column group in the full-width panel */
-  gap: 32px;                     /* generous gap — background shows between images */
-  width: 100vw;                  /* full-bleed — breaks out of section padding */
+.gallery-carousel-outer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100vw;
   max-width: 100vw;
-  margin-left: calc(50% - 50vw);/* negative margin trick — same as hero */
-  padding: 10px 40px;            /* reduced vertical padding — shorter grid area */
-  background-size: cover;        /* botanical bg fills full width */
+  margin-left: calc(50% - 50vw);
+  padding: 10px 28px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.gallery-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;                    /* allow flex child to shrink below content size */
+  overflow-x: scroll;              /* always scrollable */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.gallery-grid::-webkit-scrollbar {
+  display: none;
+}
+
 .gallery-img {
-  width: 100%;
-  aspect-ratio: 4 / 3;      /* uniform size across all images */
-  object-fit: cover;         /* fills the fixed ratio without distortion */
+  flex: 0 0 260px;                 /* wide enough so 4 images overflow the track */
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
   display: block;
-  border-radius: 70px;       /* prominent round edges */
+  border-radius: 70px;
+  scroll-snap-align: start;
+  width: 25%;
 }
 
 /* ── PATH OF PRACTICE ── */
@@ -1049,7 +1079,9 @@ body {
   .class-card             { flex: 0 0 180px; }         /* slightly narrower cards on tablet */
   /* Gallery */
   .gallery       { padding: 0 28px 56px; gap: 28px; }
-  .gallery-grid  { grid-template-columns: repeat(2, 1fr); gap: 12px; }   /* 2 cols on tablet */
+  .gallery-carousel-outer { padding: 10px 16px; gap: 10px; }
+  .gallery-grid  { gap: 16px; }
+  .gallery-img   { flex: 0 0 180px; }
   /* Testimonials & Contact */
   .testimonials              { padding: 0 0 56px; gap: 36px; }
   .testimonials-carousel-outer { padding: 0 16px; gap: 10px; }
@@ -1100,7 +1132,9 @@ body {
   .carousel-btn         { width: 32px; height: 32px; font-size: 1.1rem; }
   /* Gallery mobile */
   .gallery       { padding: 0 16px 40px; gap: 20px; }
-  .gallery-grid  { grid-template-columns: 1fr; gap: 10px; }   /* single column on mobile */
+  .gallery-carousel-outer { padding: 10px 12px; gap: 8px; }
+  .gallery-grid  { gap: 12px; }
+  .gallery-img   { flex: 0 0 70vw; }              /* 1 image + peek on mobile */
   .gallery-heading { font-size: 1.2rem; }
   /* Testimonials & Contact mobile */
   .testimonials              { padding: 0 0 40px; gap: 28px; }
