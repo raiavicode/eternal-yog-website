@@ -1,50 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
 <title>Blog | Eternal Yog</title>
-<meta name="description" content="Yoga tips, routines, and wellness blogs by Eternal Yog Delhi">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Yoga tips, routines, breathwork and wellness insights from Eternal Yog Delhi. Explore our blog for beginner guides, morning flows, and mindfulness practices.">
+<meta name="keywords" content="yoga blog, yoga Delhi, yoga tips, pranayama, meditation, beginner yoga, morning yoga routine">
 
-<meta name="keywords" content="yoga delhi, yoga classes, meditation, yoga blog">
+<!-- Favicons -->
+<link rel="icon" type="image/jpeg" href="../assets/images/Logo.jpeg">
+<link rel="apple-touch-icon" href="../assets/images/Logo.jpeg">
+<meta name="theme-color" content="#2c3e1f">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Eternal Yog">
+<meta property="og:description" content="Yoga tips, routines, breathwork and wellness insights from Eternal Yog Delhi.">
+<meta property="og:image" content="../assets/images/Logo.jpeg">
+<meta property="og:url" content="https://eternalyog.com/html/blog.html">
+<meta property="og:site_name" content="Eternal Yog">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog | Eternal Yog">
+<meta name="twitter:description" content="Yoga tips, routines, breathwork and wellness insights from Eternal Yog Delhi.">
+<meta name="twitter:image" content="../assets/images/Logo.jpeg">
+
+<link rel="canonical" href="https://eternalyog.com/html/blog.html">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;500&family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/footer.css">
-</head>
+<link rel="stylesheet" href="../css/blog.css">
+<link rel="stylesheet" href="../css/footer.css">
 
+</head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-<div class="logo">
-  <a href="../index.html"><img src="../assets/images/Logo.jpeg" alt="Eternal Yog" class="logo-img"></a>
-</div>
-<div class="navlinks">
-<a href="../index.html">Home</a>
-<a href="blog.html">Blog</a>
-</div>
+  <div class="logo">
+    <a href="../index.html"><img src="../assets/images/Logo.jpeg" alt="Eternal Yog" class="logo-img"></a>
+  </div>
+  <div class="navlinks">
+    <a href="../index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="join.html" class="nav-join">Join Now</a>
+  </div>
 </nav>
 
-<section>
+<!-- BLOG HERO BANNER -->
+<div class="blog-hero" id="blog-hero">
+  <div class="blog-hero-badge">ज्ञान साझा करें</div>
+  <h1 class="blog-hero-heading">Stories, Wisdom &amp; Practice</h1>
+  <p class="blog-hero-sub">From the mat to the mind — reflections from Eternal Yog</p>
+  <div class="blog-search-wrap">
+    <input class="blog-search" id="blog-search" type="search" placeholder="Search articles, topics or practices…" autocomplete="off">
+  </div>
+</div>
 
-<h2>Yoga Blog</h2>
+<!-- CATEGORY FILTER BAR -->
+<div class="blog-filter-bar" id="blog-filter-bar"></div>
 
-<div id="category-filter" class="grid"></div>
+<!-- MAGAZINE GRID (list view) -->
+<div id="blog-list-view">
+  <div class="blog-magazine-section" id="blog-magazine-section">
+    <div class="blog-magazine-grid" id="blog-magazine-grid"></div>
+  </div>
+  <div class="blog-grid-section">
+    <div class="blog-grid" id="blog-grid"></div>
+  </div>
+</div>
 
-<div id="blog-container" class="grid"></div>
+<!-- DETAIL VIEW -->
+<div id="blog-detail-view" style="display:none;"></div>
 
-</section>
+<!-- WHATSAPP CTA BAND -->
+<div class="blog-wa-band" id="blog-wa-band">
+  <div class="blog-wa-badge">Book a Class</div>
+  <h2 class="blog-wa-heading">Ready to deepen your practice?</h2>
+  <p class="blog-wa-sub">Join Eternal Yog classes in Delhi. Personal guidance, small batches, authentic yoga.</p>
+  <a class="blog-wa-btn"
+     href="https://wa.me/919220605069?text=Hello!%20I'd%20like%20to%20know%20more%20about%20Eternal%20Yog%20classes."
+     target="_blank" rel="noopener noreferrer">
+    <span class="blog-wa-btn-label"><img src="../assets/icons/whatsapp.svg" alt="WhatsApp" style="width:18px;height:18px;vertical-align:middle;margin-right:6px;">Book a Free Trial Class →</span>
+    <span class="blog-wa-btn-sub">Chat with us on WhatsApp</span>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <span class="site-footer-sep">·</span>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <span class="site-footer-sep">·</span>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
+  <p class="site-footer-copy">&copy; 2026 Eternal Yog. All rights reserved.</p>
+</footer>
 
 <script src="../js/blog.js"></script>
-
-  <footer class="site-footer">
-    <div class="site-footer-links">
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <span class="site-footer-sep">·</span>
-      <a href="terms.html">Terms &amp; Conditions</a>
-      <span class="site-footer-sep">·</span>
-      <a href="disclaimer.html">Disclaimer</a>
-    </div>
-    <p class="site-footer-copy">&copy; 2026 Eternal Yog. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
