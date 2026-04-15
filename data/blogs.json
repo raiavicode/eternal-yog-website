@@ -1,32 +1,282 @@
 [
-{
-"id": 1,
-"title": "5 Benefits of Daily Yoga",
-"category": "Beginner",
-"highlight": "Discover how just 20 minutes of yoga daily can transform your body and mind.",
-"content": "Yoga is more than just physical exercise. It combines breath control, movement, and mindfulness to improve overall well-being. Regular practice enhances flexibility, builds strength, reduces stress, and improves sleep quality. Even beginners can experience noticeable benefits within a few weeks of consistent practice.\n\n\n\nJoin our yoga classes in Delhi at https://eternalyog.com/",
-"seoTitle": "5 Benefits of Daily Yoga for Body & Mind | Eternal Yog Delhi",
-"seoDescription": "Discover 5 proven benefits of daily yoga including stress relief, flexibility, and better sleep. Start your yoga journey with Eternal Yog Delhi.",
-"keywords": "benefits of yoga, daily yoga benefits, yoga for beginners, yoga Delhi, stress relief yoga"
-},
-{
-"id": 2,
-"title": "Best Morning Yoga Routine",
-"category": "Routine",
-"highlight": "Start your day energized with this simple yoga flow.",
-"content": "A morning yoga routine helps awaken your body and mind. Begin with gentle stretches, move into sun salutations, and finish with breathing exercises. This routine boosts circulation, improves focus, and sets a positive tone for the rest of the day.\n\n\n\nJoin our yoga classes in Delhi at https://eternalyog.com/",
-"seoTitle": "Best Morning Yoga Routine for Beginners | Energize Your Day",
-"seoDescription": "Follow this simple morning yoga routine to boost energy, improve focus, and start your day right. Perfect for beginners and busy schedules.",
-"keywords": "morning yoga routine, beginner yoga routine, daily yoga practice, yoga morning flow"
-},
-{
-"id": 3,
-"title": "Meditation for Stress Relief",
-"category": "Mindfulness",
-"highlight": "Learn how breathing techniques can instantly calm your mind.",
-"content": "Meditation is a powerful tool for stress management. By focusing on your breath and staying present, you can reduce anxiety and improve emotional balance. Practicing even 10 minutes daily can significantly improve mental clarity and relaxation.\n\n\n\nJoin our yoga classes in Delhi at https://eternalyog.com/",
-"seoTitle": "Meditation for Stress Relief | Simple Techniques to Calm Your Mind",
-"seoDescription": "Learn simple meditation techniques for stress relief. Reduce anxiety, improve focus, and feel calmer with daily mindfulness practice.",
-"keywords": "meditation for stress relief, breathing techniques, mindfulness meditation, reduce anxiety yoga"
-}
+  {
+    "id": "5-benefits-of-daily-yoga",
+    "title": "5 Benefits of Daily Yoga",
+    "seoTitle": "5 Benefits of Daily Yoga for Body & Mind | Eternal Yog",
+    "seoDescription": "Discover 5 proven benefits of daily yoga including stress relief, flexibility, and better sleep. Start your yoga journey with Eternal Yog Delhi.",
+    "keywords": ["benefits of yoga", "daily yoga benefits", "yoga for beginners", "yoga Delhi", "stress relief yoga"],
+    "category": "Beginner",
+    "tags": ["beginner", "daily practice", "wellness", "flexibility", "stress relief"],
+    "author": {
+      "name": "Eternal Yog",
+      "title": "Founder & Lead Instructor",
+      "avatar": "../assets/images/Instructor.jpeg"
+    },
+    "publishedDate": "2026-03-10T09:00:00",
+    "updatedDate": "2026-03-10T09:00:00",
+    "readingTime": 4,
+    "coverImage": {
+      "src": "../assets/images/Beginner Yoga.jpg",
+      "alt": "Student practising beginner yoga on a mat in a peaceful studio",
+      "caption": "Even 20 minutes a day transforms body and mind."
+    },
+    "highlight": "Discover how just 20 minutes of yoga daily can transform your body and mind.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Yoga is more than just physical exercise. It combines breath control, movement, and mindfulness to improve overall well-being. Regular practice enhances flexibility, builds strength, reduces stress, and improves sleep quality."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "1. Improved Flexibility"
+      },
+      {
+        "type": "paragraph",
+        "text": "Daily yoga practice gently lengthens and loosens tight muscles. Even beginners can experience noticeable improvements in flexibility within a few weeks of consistent practice — especially in the hips, hamstrings, and shoulders."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2. Stronger Body, Quieter Mind"
+      },
+      {
+        "type": "paragraph",
+        "text": "Yoga builds functional strength by engaging multiple muscle groups simultaneously. Poses like Warrior II and Plank develop core stability while calming the nervous system — a combination no gym machine can offer."
+      },
+      {
+        "type": "quote",
+        "text": "योगः चित्तवृत्तिनिरोधः",
+        "attribution": "Yoga Sutras of Patanjali — Yoga is the cessation of the fluctuations of the mind."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "3. Stress Relief"
+      },
+      {
+        "type": "paragraph",
+        "text": "Breathwork (pranayama) activates the parasympathetic nervous system, reducing cortisol levels and inducing a deep sense of calm. A 20-minute session can shift your entire nervous system state."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "4. Better Sleep"
+      },
+      {
+        "type": "paragraph",
+        "text": "Restorative yoga and evening pranayama signal the body to wind down. Studies show that regular practitioners fall asleep faster and report deeper, more restful sleep compared to non-practitioners."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "5. Mindful Awareness"
+      },
+      {
+        "type": "paragraph",
+        "text": "Yoga trains you to notice sensation, breath, and thought without reacting. This quality of awareness carries off the mat — into conversations, decisions, and everyday moments."
+      },
+      {
+        "type": "list",
+        "style": "unordered",
+        "items": [
+          "Practise at a consistent time each day to build the habit",
+          "Start with 20 minutes — duration matters less than consistency",
+          "Focus on breath over shape; the posture is secondary",
+          "A qualified teacher accelerates progress and prevents injury"
+        ]
+      },
+      {
+        "type": "cta",
+        "variant": "whatsapp",
+        "label": "Ready to start your daily practice? Book a beginner class."
+      }
+    ],
+    "relatedPostIds": ["best-morning-yoga-routine", "meditation-for-stress-relief"],
+    "featured": true,
+    "status": "published"
+  },
+  {
+    "id": "best-morning-yoga-routine",
+    "title": "Best Morning Yoga Routine",
+    "seoTitle": "Best Morning Yoga Routine for Beginners | Eternal Yog Delhi",
+    "seoDescription": "Follow this simple morning yoga routine to boost energy, improve focus, and start your day right. Perfect for beginners and busy schedules.",
+    "keywords": ["morning yoga routine", "beginner yoga routine", "daily yoga practice", "yoga morning flow", "yoga Delhi"],
+    "category": "Routine",
+    "tags": ["morning", "routine", "beginner", "energy", "flow"],
+    "author": {
+      "name": "Eternal Yog",
+      "title": "Founder & Lead Instructor",
+      "avatar": "../assets/images/Instructor.jpeg"
+    },
+    "publishedDate": "2026-03-18T07:30:00",
+    "updatedDate": "2026-03-18T07:30:00",
+    "readingTime": 5,
+    "coverImage": {
+      "src": "../assets/images/Morning Yoga.jpg",
+      "alt": "Person performing morning yoga sun salutation at sunrise",
+      "caption": "Start your day with intention and movement."
+    },
+    "highlight": "Start your day energised with this simple yoga flow — no experience needed.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "A morning yoga routine helps awaken your body and mind before the demands of the day take over. Begin with just 25 minutes and notice how differently your entire day unfolds."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Step 1 — Gentle Awakening (5 minutes)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Begin lying on your back. Draw both knees to the chest and rock gently side to side. Follow with a supine twist on each side, holding 5 breaths. This releases the lower back and eases the spine into movement."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Step 2 — Sun Salutations (10 minutes)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Move through 4–6 rounds of Surya Namaskar (Sun Salutation). Go slowly for the first 2 rounds, synchronising every movement with your breath. By round 4, let the pace build naturally. This is the heart of the morning practice."
+      },
+      {
+        "type": "image",
+        "src": "../assets/images/Namastey Instructor.jpg",
+        "alt": "Instructor demonstrating Namaste pose after morning yoga practice",
+        "caption": "Each movement linked to breath — the essence of Vinyasa."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Step 3 — Standing Poses (5 minutes)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Move into Warrior I, Warrior II, and Triangle Pose, holding each for 5 breaths per side. These build lower-body strength and open the hips — essential for anyone sitting at a desk through the day."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Step 4 — Closing Breathwork (5 minutes)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Finish in Sukhasana (comfortable seated pose). Practise 5 rounds of Nadi Shodhana (alternate nostril breathing). This balances the nervous system and creates a clear, calm mental state to carry into the day."
+      },
+      {
+        "type": "quote",
+        "text": "उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत",
+        "attribution": "Katha Upanishad — Arise, awake, and stop not till the goal is reached."
+      },
+      {
+        "type": "list",
+        "style": "ordered",
+        "items": [
+          "Gentle supine stretches — 5 min",
+          "Sun Salutations x 4–6 rounds — 10 min",
+          "Warrior I, II, Triangle — 5 min",
+          "Nadi Shodhana breathwork — 5 min"
+        ]
+      },
+      {
+        "type": "cta",
+        "variant": "whatsapp",
+        "label": "Want to learn this routine with a live instructor? Book a morning class."
+      }
+    ],
+    "relatedPostIds": ["5-benefits-of-daily-yoga", "meditation-for-stress-relief"],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "id": "meditation-for-stress-relief",
+    "title": "Meditation for Stress Relief",
+    "seoTitle": "Meditation for Stress Relief | Breathwork Techniques | Eternal Yog",
+    "seoDescription": "Learn simple meditation and breathwork techniques for stress relief. Reduce anxiety, improve focus, and feel calmer with 10 minutes of daily mindfulness.",
+    "keywords": ["meditation for stress relief", "breathing techniques", "mindfulness meditation", "reduce anxiety yoga", "pranayama Delhi"],
+    "category": "Mindfulness",
+    "tags": ["meditation", "breathwork", "stress", "mindfulness", "pranayama"],
+    "author": {
+      "name": "Eternal Yog",
+      "title": "Founder & Lead Instructor",
+      "avatar": "../assets/images/Instructor.jpeg"
+    },
+    "publishedDate": "2026-04-01T10:00:00",
+    "updatedDate": "2026-04-01T10:00:00",
+    "readingTime": 4,
+    "coverImage": {
+      "src": "../assets/images/Studio Yoga.jpg",
+      "alt": "Person meditating in a calm yoga studio with soft natural light",
+      "caption": "10 minutes of stillness can transform an entire day."
+    },
+    "highlight": "Learn how breathing techniques can instantly calm your mind — anytime, anywhere.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Meditation is one of the most accessible and evidence-backed tools for managing stress. Unlike medication or complex therapies, it requires nothing but attention — and a few minutes of time you already have."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Why Breath is the Gateway"
+      },
+      {
+        "type": "paragraph",
+        "text": "The breath is the only autonomic function you can consciously control. When you slow the breath deliberately, you send a direct signal to the brain that it is safe to relax. This is not metaphor — it is measurable neuroscience."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Technique 1 — 4-7-8 Breathing"
+      },
+      {
+        "type": "paragraph",
+        "text": "Inhale for 4 counts, hold for 7, exhale for 8. The extended exhale activates the vagus nerve and lowers heart rate within 2–3 cycles. Practice this before sleep, before a difficult meeting, or any moment stress peaks."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Technique 2 — Bhramari (Humming Bee Breath)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Close your eyes, plug your ears gently with your thumbs, and hum on the exhale like a bee. The internal vibration stimulates the vagus nerve and creates an immediate sense of inward calm. Practise 5–10 rounds."
+      },
+      {
+        "type": "quote",
+        "text": "प्राणायामेन युक्तेन सर्वरोगक्षयो भवेत्",
+        "attribution": "Hatha Yoga Pradipika — Through the practice of pranayama, all diseases are destroyed."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Building a 10-Minute Daily Practice"
+      },
+      {
+        "type": "list",
+        "style": "unordered",
+        "items": [
+          "Sit comfortably — chair, cushion, or floor, spine upright",
+          "Set a timer so you are not watching the clock",
+          "Spend 3 minutes on 4-7-8 breathing to settle the nervous system",
+          "Spend 5 minutes observing natural breath without controlling it",
+          "Close with 2 minutes of Bhramari to seal the practice"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Consistency matters far more than duration. Ten minutes every day produces greater results than an hour once a week. The nervous system responds to regularity, not intensity."
+      },
+      {
+        "type": "cta",
+        "variant": "whatsapp",
+        "label": "Learn pranayama with personal guidance. Book a session."
+      }
+    ],
+    "relatedPostIds": ["5-benefits-of-daily-yoga", "best-morning-yoga-routine"],
+    "featured": false,
+    "status": "published"
+  }
 ]

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blog Admin | Eternal Yog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/blog-admin.css">
+</head>
+<body>
+
+<!-- ADMIN HEADER -->
+<header class="adm-header">
+  <div class="adm-header-inner">
+    <a href="../index.html"><img src="../assets/images/Logo.jpeg" alt="Eternal Yog" class="adm-logo"></a>
+    <span class="adm-header-title">Blog Post Creator</span>
+    <a class="adm-header-link" href="blog.html" target="_blank">View Blog ↗</a>
+  </div>
+  <div class="adm-notice">Internal tool — do not share this URL.</div>
+</header>
+
+<!-- MAIN FORM -->
+<main class="adm-main">
+
+  <!-- METADATA CARD -->
+  <section class="adm-card" id="adm-meta-card">
+    <h2 class="adm-card-title">Post Details</h2>
+
+    <div class="adm-row">
+      <div class="adm-field adm-field--full">
+        <label class="adm-label">Post Title *</label>
+        <input class="adm-input adm-input--cinzel" id="adm-title" type="text" placeholder="Enter post title…" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="adm-row">
+      <div class="adm-field">
+        <label class="adm-label">SEO Title <span class="adm-counter" id="seo-title-counter">0/60</span></label>
+        <input class="adm-input" id="adm-seo-title" type="text" placeholder="Optimised title for search engines…" maxlength="80">
+      </div>
+      <div class="adm-field">
+        <label class="adm-label">Post Slug (URL)</label>
+        <input class="adm-input adm-input--mono" id="adm-slug" type="text" placeholder="auto-generated-from-title">
+      </div>
+    </div>
+
+    <div class="adm-row">
+      <div class="adm-field adm-field--full">
+        <label class="adm-label">SEO Description <span class="adm-counter" id="seo-desc-counter">0/160</span></label>
+        <textarea class="adm-textarea" id="adm-seo-desc" rows="2" placeholder="Write as if answering a question someone might ask an AI assistant…" maxlength="200"></textarea>
+        <span class="adm-hint">Aim for 140–160 characters. Conversational sentences rank better in AI-powered search.</span>
+      </div>
+    </div>
+
+    <div class="adm-row">
+      <div class="adm-field adm-field--full">
+        <label class="adm-label">Highlight / Excerpt *</label>
+        <textarea class="adm-textarea" id="adm-highlight" rows="2" placeholder="One compelling sentence to hook the reader…"></textarea>
+      </div>
+    </div>
+
+    <div class="adm-row">
+      <div class="adm-field">
+        <label class="adm-label">Category *</label>
+        <input class="adm-input" id="adm-category" type="text" list="adm-category-list" placeholder="Beginner, Routine, Mindfulness…">
+        <datalist id="adm-category-list">
+          <option value="Beginner">
+          <option value="Routine">
+          <option value="Mindfulness">
+          <option value="Pranayama">
+          <option value="Philosophy">
+          <option value="Asana">
+          <option value="Lifestyle">
+        </datalist>
+      </div>
+      <div class="adm-field">
+        <label class="adm-label">Reading Time (min)</label>
+        <div class="adm-input-row">
+          <input class="adm-input adm-input--small" id="adm-reading-time" type="number" min="1" max="60" placeholder="4">
+          <button class="adm-btn adm-btn--ghost" id="adm-calc-rt">Auto-calculate</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="adm-row">
+      <div class="adm-field adm-field--full">
+        <label class="adm-label">Tags (press Enter to add)</label>
+        <div class="adm-tags-wrap" id="adm-tags-wrap">
+          <input class="adm-tag-input" id="adm-tags-input" type="text" placeholder="Add a tag…">
+        </div>
+      </div>
+    </div>
+
+    <div class="adm-row">
+      <div class="adm-field adm-field--full">
+        <label class="adm-label">Keywords (press Enter to add)</label>
+        <div class="adm-tags-wrap" id="adm-kw-wrap">
+          <input class="adm-tag-input" id="adm-kw-input" type="text" placeholder="Add a keyword…">
+        </div>
+      </div>
+    </div>
+
+    <div class="adm-row">
+      <div class="adm-field">
+        <label class="adm-label">Author Name</label>
+        <input class="adm-input" id="adm-author-name" type="text" value="Eternal Yog" list="adm-author-list">
+        <datalist id="adm-author-list"><option value="Eternal Yog"></datalist>
+      </div>
+      <div class="adm-field">
+        <label class="adm-label">Author Title</label>
+        <input class="adm-input" id="adm-author-title" type="text" value="Founder &amp; Lead Instructor">
+      </div>
+    </div>
+
+    <div class="adm-row">
+      <div class="adm-field">
+        <label class="adm-label">Publish Date</label>
+        <input class="adm-input" id="adm-date" type="datetime-local">
+      </div>
+      <div class="adm-field adm-field--toggles">
+        <label class="adm-label">Options</label>
+        <div class="adm-toggles">
+          <label class="adm-toggle-label">
+            <input type="checkbox" id="adm-featured"> Featured post
+          </label>
+          <label class="adm-toggle-label">
+            <input type="checkbox" id="adm-published" checked> Published (uncheck = Draft)
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="adm-row">
+      <div class="adm-field adm-field--full">
+        <label class="adm-label">Cover Image URL</label>
+        <input class="adm-input" id="adm-cover-src" type="text" placeholder="../assets/images/your-image.jpg">
+        <div class="adm-row" style="margin-top:8px;">
+          <div class="adm-field">
+            <input class="adm-input" id="adm-cover-alt" type="text" placeholder="Alt text (describe image for SEO)">
+          </div>
+          <div class="adm-field">
+            <input class="adm-input" id="adm-cover-caption" type="text" placeholder="Optional caption">
+          </div>
+        </div>
+        <div id="adm-cover-preview-wrap" style="display:none;margin-top:8px;">
+          <img id="adm-cover-preview" src="" alt="Cover preview" style="max-height:160px;border-radius:12px;object-fit:cover;max-width:100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT BLOCK BUILDER -->
+  <section class="adm-card" id="adm-content-card">
+    <div class="adm-card-header">
+      <h2 class="adm-card-title">Post Content</h2>
+      <button class="adm-btn adm-btn--ghost" id="adm-toggle-preview">Preview Mode</button>
+    </div>
+
+    <div class="adm-block-toolbar">
+      <button class="adm-block-btn" data-type="paragraph">¶ Paragraph</button>
+      <button class="adm-block-btn" data-type="heading">H Heading</button>
+      <button class="adm-block-btn" data-type="image">🖼 Image</button>
+      <button class="adm-block-btn" data-type="video">▶ Video</button>
+      <button class="adm-block-btn" data-type="quote">❝ Quote</button>
+      <button class="adm-block-btn" data-type="list">≡ List</button>
+      <button class="adm-block-btn" data-type="cta">📱 WhatsApp CTA</button>
+    </div>
+
+    <div id="adm-blocks-list"></div>
+    <div id="adm-preview-area" style="display:none;"></div>
+
+    <button class="adm-add-block-btn" id="adm-add-paragraph">+ Add Paragraph</button>
+  </section>
+
+  <!-- RELATED POSTS -->
+  <section class="adm-card">
+    <h2 class="adm-card-title">Related Posts</h2>
+    <input class="adm-input" id="adm-related-search" type="text" placeholder="Search existing posts to link…">
+    <div id="adm-related-suggestions" class="adm-suggestions"></div>
+    <div class="adm-tags-wrap" id="adm-related-wrap" style="margin-top:8px;"></div>
+    <span class="adm-hint">Recommend up to 3 related posts. Leave empty to auto-match by category.</span>
+  </section>
+
+</main>
+
+<!-- STICKY EXPORT BAR -->
+<div class="adm-export-bar">
+  <div class="adm-export-slug" id="adm-export-slug">blog.html?id=<span id="adm-slug-preview">your-post-slug</span></div>
+  <div class="adm-export-status" id="adm-export-status">Draft</div>
+  <div class="adm-export-actions">
+    <button class="adm-btn adm-btn--ghost" id="adm-copy-json">Copy JSON</button>
+    <button class="adm-btn adm-btn--ghost" id="adm-download-json">Download JSON</button>
+    <button class="adm-btn adm-btn--primary" id="adm-publish-btn">Publish</button>
+  </div>
+</div>
+
+<script src="../js/blog-admin.js"></script>
+
+</body>
+</html>
