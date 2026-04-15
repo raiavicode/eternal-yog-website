@@ -6,7 +6,7 @@ var WA_BASE = 'https://wa.me/' + WA_NUMBER + '?text=';
 var WA_ICON = '<img src="../assets/icons/whatsapp.svg" alt="WhatsApp" style="width:18px;height:18px;vertical-align:middle;margin-right:6px;">';
 
 var AUTHOR_BIOS = {
-  'Eternal Yog': 'Founded at the foothills of the Himalayas, Eternal Yog is guided by a teacher trained in the classical lineages of Hatha and Raja yoga. Every session is a living transmission — shaped by where you are, not where you think you should be.'
+  'Eternal Yog': 'Trained in the classical lineages of Hatha and Raja yoga, our guide does not teach yoga — she walks alongside you as you remember it. Rooted in posture, philosophy, and the silence between breaths. Every session is shaped by where you are, not where you think you should be.'
 };
 
 /* ── UTILS ── */
@@ -292,7 +292,7 @@ function renderDetailView(blog, allBlogs) {
     '<div class="post-meta-bar">' +
     '<div class="post-tags">' + tagsHtml + '</div>' +
     '<div class="post-share">' +
-    '<a class="post-share-btn post-share-btn--wa" href="' + waShareUrl + '" target="_blank" rel="noopener noreferrer" title="Share on WhatsApp">' + WA_ICON + '</a>' +
+    '<a class="post-share-btn post-share-btn--wa" href="' + waShareUrl + '" target="_blank" rel="noopener noreferrer" title="Share on WhatsApp"><img src="../assets/icons/whatsapp.svg" alt="WhatsApp" style="width:100%;height:100%;display:block;"></a>' +
     '<button class="post-share-btn" id="copy-link-btn" title="Copy link">🔗</button>' +
     '</div>' +
     '</div>' +

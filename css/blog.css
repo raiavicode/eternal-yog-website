@@ -383,8 +383,10 @@
 .post-hero-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center top;
   display: block;
+  background: var(--deep-green);
 }
 
 .post-hero-overlay {
@@ -484,8 +486,8 @@
 }
 
 .post-share-btn {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 2px solid var(--deep-green);
   background: transparent;
@@ -499,18 +501,19 @@
   padding: 0;
 }
 
-/* WhatsApp share — icon fills circle, no background */
+/* WhatsApp share — icon fills button area, no border (SVG has its own shape) */
 .post-share-btn--wa {
-  border-color: var(--deep-green);
+  border: none;
   background: transparent;
-  padding: 0;
+  padding: 2px;
+  overflow: visible;
 }
 
 .post-share-btn--wa img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 50%;
+  display: block;
 }
 
 .post-share-btn:hover { filter: brightness(1.15); }
